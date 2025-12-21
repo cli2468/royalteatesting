@@ -1451,272 +1451,197 @@ footer {
     }
 }
 
-/* Location Section */
+/* Location Section Redesign */
 .location-section {
     padding: 6rem 5%;
+    text-align: left;
     background-color: var(--color-bg) !important;
+    /* Match Global Theme */
 }
 
-/* Mobile (Default) - Glassy Style */
 .location-card {
-    background: rgba(255, 255, 255, 0.6);
-    /* Glassy Override */
+    background: rgba(255, 255, 255, 0.6) !important;
+    /* Glassy effect */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: var(--radius-card);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    margin: 0 auto;
-}
-
-/* Map Visual (Hidden on Mobile) */
-.location-map-visual {
-    display: none;
-    height: 250px;
-    background-color: #e0e0e0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='24' fill='%23999'%3EMap%3C/text%3E%3C/svg%3E");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-/* Details */
-.location-details {
+    border-radius: 24px;
     padding: 1.5rem 2rem;
-    /* Match old spacing */
+    /* Tighter padding to move text up/left */
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    text-align: left;
 }
 
-/* Header */
-.loc-header {
+.address-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    /* Align to top of multi-line text */
+    justify-content: flex-start;
+    gap: 1.5rem;
     flex-wrap: wrap;
-    gap: 1rem;
 }
 
-.loc-header h3 {
-    font-family: var(--font-heading);
-    /* Brand font on Title */
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--color-primary);
-    /* Use brand color for header on mobile? Or standard? I'll stick to Primary for consistency with old "Come Visit Us" feel inside */
-    text-transform: uppercase;
+.address-row p {
     margin: 0;
+    flex: 0 0 auto;
+    max-width: 160px;
+    /* Force wrapping as requested */
+    line-height: 1.3;
 }
 
-.btn-directions-ghost {
-    background: transparent;
-    border: 1px solid #ccc;
-    /* Or match brand? I'll stick to ghost for now */
+.btn-directions {
+    background: rgba(255, 255, 255, 0.8);
+    color: #1D1D1F;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
-    color: #333;
-    font-size: 0.9rem;
-    transition: all 0.2s ease;
-    font-weight: 500;
+    border-radius: 30px;
+    /* Pill */
+    font-size: 0.85rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: -8px;
+    /* Visual alignment to match first line of address */
 }
 
-.btn-directions-ghost:hover {
-    background: #e0e0e0;
+.btn-directions:hover {
+    background: #fff;
 }
 
-/* Grid */
-.loc-grid {
+.info-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
-/* Mobile Typography (Bold Labels) */
-.loc-label {
+.info-label {
     display: block;
     font-size: 0.95rem;
+    /* Slight bump */
     color: #555;
+    /* Darker grey */
     font-weight: 700;
-    /* Bold per old design */
+    /* BOLD as requested */
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 0.25rem;
-    font-family: var(--font-body);
-    /* Or Heading? I'll use Body Bold for clarity */
+    margin-bottom: 0.4rem;
 }
 
-.loc-value {
-    color: #1a1a1a;
-    font-weight: 500;
+.info-block p {
+    font-size: 1.1rem;
+    color: #1D1D1F;
     line-height: 1.4;
-    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
 }
 
-.loc-value a {
+.info-block a {
+    color: #1D1D1F;
     text-decoration: none;
-    color: inherit;
 }
 
-/* Divider */
-.loc-divider-line {
-    height: 1px;
-    background: rgba(0, 0, 0, 0.1);
-    /* Subtle divider */
-    margin: 0.5rem 0;
+/* Hours Accordion */
+.hours-container {
+    border-top: 1px solid #E0E0E0;
+    padding-top: 1.5rem;
 }
 
-/* Footer & Hours */
-.loc-footer {
+.hours-trigger {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
 }
 
-.loc-hours-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+.current-status {
+    font-weight: 700;
+    color: #1D1D1F;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
-.loc-status {
-    font-weight: 600;
-    color: #333;
-    font-size: 0.9rem;
-}
-
-.btn-hours-text {
+.btn-see-hours {
     background: none;
     border: none;
-    color: #666;
+    color: #1D1D1F;
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    /* BOLD */
     cursor: pointer;
-    font-size: 0.9rem;
+    padding: 0;
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-weight: 600;
+    gap: 0.5rem;
+    transition: color 0.2s;
+    pointer-events: none;
 }
 
-.btn-hours-text:hover {
-    color: #333;
+.btn-see-hours:hover {
+    color: #000;
 }
 
-.btn-order-solid {
-    background: #388E3C;
-    /* Actually reference had Green. I'll use Green. */
-    color: white;
-    padding: 0.6rem 1.25rem;
-    border-radius: 4px;
-    font-weight: 600;
-    text-transform: none;
-    transition: background 0.2s;
-    font-size: 0.95rem;
-}
-
-.btn-order-solid:hover {
-    background: #2E7D32;
-}
-
-/* Dropdown */
 .hours-dropdown {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
-    background: rgba(255, 255, 255, 0.5);
-    /* Semi transparent on mobile? */
-    padding: 0 1rem;
-    border-radius: 4px;
-    margin-top: 0;
+    transition: max-height 0.4s ease-out, margin-top 0.4s ease;
 }
 
-.hours-dropdown.active {
-    max-height: 300px;
-    padding: 1rem;
-    margin-top: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+.hours-dropdown.expanded {
+    max-height: 500px;
+    /* Arbitrary large height */
+    margin-top: 1.5rem;
 }
 
-.hours-row {
+.hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hours-list li {
     display: flex;
     justify-content: space-between;
-    padding: 0.4rem 0;
-    font-size: 0.9rem;
-    color: #555;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #EEE;
+    font-size: 0.95rem;
+    color: #444;
 }
 
-/* Desktop Split Layout (New Design Overrides) */
-@media (min-width: 900px) {
-    .location-card {
-        background: #F5F5F5;
-        /* Solid Grey */
-        backdrop-filter: none;
-        border: none;
-        flex-direction: row;
-        align-items: stretch;
-        max-width: 1000px;
-    }
+.hours-list li:last-child {
+    border-bottom: none;
+}
 
-    .location-map-visual {
-        display: block;
-        /* Show Map */
-        width: 35%;
-        height: auto;
-        min-height: 350px;
-        order: 1;
-    }
+.btn-order-online {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-weight: 700;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    padding: 0.7rem;
+    /* REMOVED TALL PADDING */
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 95, 95, 0.3);
+}
 
-    .location-details {
-        width: 65%;
-        padding: 3rem 4rem;
-        order: 2;
-        justify-content: center;
-    }
-
-    .loc-grid {
-        grid-template-columns: 1fr 1fr;
-        padding-right: 2rem;
-    }
-
-    .loc-header {
-        margin-bottom: 1rem;
-    }
-
-    .loc-header h3 {
-        font-family: var(--font-body);
-        /* Reset to clean sans */
-        font-weight: 400;
-        font-size: 1.5rem;
-        color: #333;
-        text-transform: none;
-    }
-
-    .loc-label {
-        font-weight: normal;
-        text-transform: none;
-        letter-spacing: 0;
-        color: #666;
-    }
-
-    .loc-divider-line {
-        margin: 2rem 0;
-    }
-
-    /* Adjust font sizes for desktop */
-    .loc-header h3 {
-        font-size: 1.5rem;
-    }
-
-    .hours-dropdown {
-        background: #fff;
-        /* Solid white on grey card */
-    }
+.btn-order-online:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 95, 95, 0.4);
 }
 
 /* Full Menu Button */
