@@ -137,18 +137,20 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #1D1D1F;
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .nav-icon-link:hover {
-    color: var(--color-primary);
     transform: translateY(-2px);
 }
 
-.nav-icon-link svg {
-    width: 24px;
-    height: 24px;
+.nav-app-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 8px;
+    /* Smooth corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Hero Section */
