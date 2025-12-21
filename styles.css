@@ -51,6 +51,10 @@ a {
     color: inherit;
 }
 
+.mobile-break {
+    display: none;
+}
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -1788,15 +1792,18 @@ footer {
     }
 
     .address-row p {
-        width: 100%;
-        /* Text takes full width line? No, side-by-side. */
-        /* Wait, if it's side-by-side with "Get Directions", text shouldn't be 100%. */
-        /* Revert to original behavior: flex: 0 0 auto? */
         flex: 1;
         /* Allow text to take space */
         text-align: left;
         max-width: none;
+        width: auto;
+        /* Side-by-side with button */
     }
+
+    .mobile-break {
+        display: inline;
+    }
+
 
     /* "Get Directions" - Align naturally */
     .btn-directions {
