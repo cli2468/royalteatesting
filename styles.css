@@ -1457,8 +1457,13 @@ footer {
     background-color: var(--color-bg) !important;
 }
 
+/* Mobile (Default) - Glassy Style */
 .location-card {
-    background: #F5F5F5;
+    background: rgba(255, 255, 255, 0.6);
+    /* Glassy Override */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: var(--radius-card);
     overflow: hidden;
     display: flex;
@@ -1467,8 +1472,9 @@ footer {
     margin: 0 auto;
 }
 
-/* Map Visual (Left) */
-.location-map {
+/* Map Visual (Hidden on Mobile) */
+.location-map-visual {
+    display: none;
     height: 250px;
     background-color: #e0e0e0;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='24' fill='%23999'%3EMap%3C/text%3E%3C/svg%3E");
@@ -1477,9 +1483,10 @@ footer {
     position: relative;
 }
 
-/* Details (Right) */
-.location-content {
-    padding: 2rem;
+/* Details */
+.location-details {
+    padding: 1.5rem 2rem;
+    /* Match old spacing */
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -1495,63 +1502,70 @@ footer {
 }
 
 .loc-header h3 {
-    font-family: var(--font-body);
-    font-weight: 400;
-    font-size: 1.25rem;
-    color: #333;
-    text-transform: none;
+    font-family: var(--font-heading);
+    /* Brand font on Title */
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    /* Use brand color for header on mobile? Or standard? I'll stick to Primary for consistency with old "Come Visit Us" feel inside */
+    text-transform: uppercase;
     margin: 0;
 }
 
-.btn-directions-outline {
+.btn-directions-ghost {
     background: transparent;
     border: 1px solid #ccc;
+    /* Or match brand? I'll stick to ghost for now */
     padding: 0.5rem 1rem;
     border-radius: 4px;
     color: #333;
     font-size: 0.9rem;
     transition: all 0.2s ease;
     font-weight: 500;
-    text-decoration: none;
 }
 
-.btn-directions-outline:hover {
+.btn-directions-ghost:hover {
     background: #e0e0e0;
 }
 
-/* Info Grid */
-.loc-info-row {
+/* Grid */
+.loc-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
+/* Mobile Typography (Bold Labels) */
 .loc-label {
     display: block;
-    font-size: 0.85rem;
-    color: #666;
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 700;
+    /* Bold per old design */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     margin-bottom: 0.25rem;
+    font-family: var(--font-body);
+    /* Or Heading? I'll use Body Bold for clarity */
 }
 
-.loc-info-col p {
+.loc-value {
     color: #1a1a1a;
     font-weight: 500;
     line-height: 1.4;
-    font-size: 0.95rem;
-    margin: 0;
+    font-size: 1rem;
 }
 
-.loc-info-col a {
+.loc-value a {
     text-decoration: none;
     color: inherit;
 }
 
 /* Divider */
-.loc-divider {
+.loc-divider-line {
     height: 1px;
-    background: #ddd;
-    border: none;
-    /* hr default reset */
+    background: rgba(0, 0, 0, 0.1);
+    /* Subtle divider */
     margin: 0.5rem 0;
 }
 
@@ -1564,20 +1578,20 @@ footer {
     gap: 1rem;
 }
 
-.loc-hours-status {
+.loc-hours-wrapper {
     display: flex;
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
-.status-text {
+.loc-status {
     font-weight: 600;
     color: #333;
     font-size: 0.9rem;
 }
 
-.btn-see-hours-simple {
+.btn-hours-text {
     background: none;
     border: none;
     color: #666;
@@ -1586,16 +1600,16 @@ footer {
     display: flex;
     align-items: center;
     gap: 4px;
-    text-decoration: underline;
-    padding: 0;
+    font-weight: 600;
 }
 
-.btn-see-hours-simple:hover {
+.btn-hours-text:hover {
     color: #333;
 }
 
-.btn-order-green {
+.btn-order-solid {
     background: #388E3C;
+    /* Actually reference had Green. I'll use Green. */
     color: white;
     padding: 0.6rem 1.25rem;
     border-radius: 4px;
@@ -1603,10 +1617,9 @@ footer {
     text-transform: none;
     transition: background 0.2s;
     font-size: 0.95rem;
-    text-decoration: none;
 }
 
-.btn-order-green:hover {
+.btn-order-solid:hover {
     background: #2E7D32;
 }
 
@@ -1615,17 +1628,18 @@ footer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
+    /* Semi transparent on mobile? */
     padding: 0 1rem;
     border-radius: 4px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 0;
 }
 
 .hours-dropdown.active {
     max-height: 300px;
     padding: 1rem;
     margin-top: 1rem;
-    border: 1px solid #eee;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .hours-row {
@@ -1634,34 +1648,39 @@ footer {
     padding: 0.4rem 0;
     font-size: 0.9rem;
     color: #555;
-    border-bottom: 1px solid #f5f5f5;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Desktop Split Layout */
+/* Desktop Split Layout (New Design Overrides) */
 @media (min-width: 900px) {
     .location-card {
+        background: #F5F5F5;
+        /* Solid Grey */
+        backdrop-filter: none;
+        border: none;
         flex-direction: row;
         align-items: stretch;
         max-width: 1000px;
     }
 
-    .location-map {
+    .location-map-visual {
+        display: block;
+        /* Show Map */
         width: 35%;
         height: auto;
         min-height: 350px;
         order: 1;
     }
 
-    .location-content {
+    .location-details {
         width: 65%;
         padding: 3rem 4rem;
         order: 2;
         justify-content: center;
     }
 
-    .loc-info-row {
+    .loc-grid {
         grid-template-columns: 1fr 1fr;
-        /* Address | Contacts */
         padding-right: 2rem;
     }
 
@@ -1669,13 +1688,34 @@ footer {
         margin-bottom: 1rem;
     }
 
-    .loc-divider {
+    .loc-header h3 {
+        font-family: var(--font-body);
+        /* Reset to clean sans */
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: #333;
+        text-transform: none;
+    }
+
+    .loc-label {
+        font-weight: normal;
+        text-transform: none;
+        letter-spacing: 0;
+        color: #666;
+    }
+
+    .loc-divider-line {
         margin: 2rem 0;
     }
 
     /* Adjust font sizes for desktop */
     .loc-header h3 {
         font-size: 1.5rem;
+    }
+
+    .hours-dropdown {
+        background: #fff;
+        /* Solid white on grey card */
     }
 }
 
