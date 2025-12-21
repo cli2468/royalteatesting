@@ -256,43 +256,53 @@
         <div class="container">
             <h2 class="section-title">Come Visit Us!</h2>
             <div class="location-card">
-                <div class="info-grid">
-                    <div class="info-block">
-                        <span class="info-label">Address</span>
-                        <div class="address-row">
-                            <p>2160 45th St, Highland, IN 46322</p>
-                            <a href="https://maps.app.goo.gl/FiBCCXKDp7xiLi46A" target="_blank"
-                                class="btn-directions">Get Directions</a>
+                <!-- Left Column: Map Visual -->
+                <div class="location-map">
+                    <!-- Placeholder for Map -->
+                    <div class="map-placeholder"></div>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="location-content">
+
+                    <!-- Header Row -->
+                    <div class="loc-header">
+                        <h3>Royal Tea</h3>
+                        <a href="https://maps.app.goo.gl/FiBCCXKDp7xiLi46A" target="_blank"
+                            class="btn-directions-outline">Get Directions &gt;</a>
+                    </div>
+
+                    <!-- Info Grid (Address | Contacts) -->
+                    <div class="loc-info-row">
+                        <div class="loc-info-col">
+                            <span class="loc-label">Address</span>
+                            <p>2160 45th St<br>Highland, IN 46322</p>
+                        </div>
+                        <div class="loc-info-col">
+                            <span class="loc-label">Contacts</span>
+                            <p><a href="tel:219-513-8363">(219) 513-8363</a></p>
+                            <p><a href="mailto:royaltea.indiana@gmail.com">royaltea.indiana@gmail.com</a></p>
                         </div>
                     </div>
-                    <div class="info-block">
-                        <span class="info-label">Contacts</span>
-                        <p><a href="tel:219-513-8363">(219) 513-8363</a></p>
-                        <p><a href="mailto:royaltea.indiana@gmail.com">royaltea.indiana@gmail.com</a></p>
-                    </div>
-                </div>
 
-                <!-- Hours Accordion -->
-                <div class="hours-container">
-                    <div class="hours-trigger" id="hoursToggle">
-                        <button class="btn-see-hours">See hours &gt;</button>
+                    <hr class="loc-divider">
+
+                    <!-- Footer Row -->
+                    <div class="loc-footer">
+                        <div class="loc-hours-status">
+                            <span class="status-text">Opens at 11:00 AM</span>
+                            <!-- I'll keep the accordion logic but simplify trigger text? Or just a link "See hours >" per design -->
+                            <button class="btn-see-hours-simple" id="hoursToggle">See hours &gt;</button>
+                        </div>
+                        <a href="https://www.royalteaone.com/order" class="btn-order-green">Order online &gt;</a>
                     </div>
+
+                    <!-- Hidden Hours Dropdown for logic preservation -->
                     <div class="hours-dropdown" id="hoursDropdown">
-                        <ul class="hours-list">
-                            <li><span>Monday</span> <span>11:00 AM - 9:30 PM</span></li>
-                            <li><span>Tuesday</span> <span>11:00 AM - 9:30 PM</span></li>
-                            <li><span>Wednesday</span> <span>11:00 AM - 9:30 PM</span></li>
-                            <li><span>Thursday</span> <span>11:00 AM - 9:30 PM</span></li>
-                            <li><span>Friday</span> <span>11:00 AM - 9:30 PM</span></li>
-                            <li><span>Saturday</span> <span>11:00 AM - 9:30 PM</span></li>
-                            <li><span>Sunday</span> <span>12:00 PM - 9:30 PM</span></li>
-                        </ul>
+
+                        <a href="#menu" class="btn-order-online">Order online &gt;</a>
                     </div>
                 </div>
-
-                <a href="#menu" class="btn-order-online">Order online &gt;</a>
-            </div>
-        </div>
     </section>
 
     <footer>
