@@ -1566,8 +1566,8 @@ footer {
     border: 1px solid rgba(0, 0, 0, 0.05);
     align-self: flex-start;
     /* Prevent stretching */
-    margin-top: 0;
-    /* Align with text top */
+    margin-top: -5px;
+    /* Nudge up */
     margin-left: auto;
     /* Push to far right */
 }
