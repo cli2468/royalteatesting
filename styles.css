@@ -1469,7 +1469,8 @@ footer {
     padding: 2.5rem;
     /* Spacious Desktop Padding */
     width: 100%;
-    max-width: 1200px;
+    max-width: 1600px;
+    /* HUGE CARD - 3x Map Width Support */
     margin: 0 auto;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     display: flex;
@@ -1480,9 +1481,10 @@ footer {
 }
 
 .map-wrapper {
-    flex: 1.5;
-    /* Wider Map */
-    min-height: 400px;
+    flex: 3;
+    /* Dominant Map Width (3:1 ratio) */
+    min-height: 550px;
+    /* Taller */
     position: relative;
     background: #E2E8F0;
     border-radius: 20px;
