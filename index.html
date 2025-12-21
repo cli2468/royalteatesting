@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Zilla+Slab:wght@400;700&family=Ma+Shan+Zheng&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Zilla+Slab:wght@400;600;700&family=Ma+Shan+Zheng&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
@@ -254,9 +256,7 @@
             <h2 class="section-title">Come Visit Us!</h2>
             <div class="location-card">
                 <div class="map-wrapper">
-                    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                        src="https://www.openstreetmap.org/export/embed.html?bbox=-87.4720,41.5337,-87.4320,41.5737&layer=mapnik&marker=41.5537,-87.4520"
-                        style="border: 0"></iframe>
+                    <div id="leaflet-map" style="width: 100%; height: 100%;"></div>
                 </div>
                 <div class="location-content">
                     <div class="info-grid">
@@ -312,6 +312,18 @@
     </button>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        var map = L.map('leaflet-map', { scrollWheelZoom: false }).setView([41.5537, -87.4520], 15);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 20
+        }).addTo(map);
+        L.marker([41.5537, -87.4520]).addTo(map)
+            .bindPopup('<b>Royal Tea</b><br>2160 45th St, Highland, IN').openPopup();
+    </script>
 </body>
 
 </html>
