@@ -1451,6 +1451,13 @@ footer {
     }
 }
 
+/* Allow Location Section to be wider for Map */
+.location-section .container {
+    max-width: 1700px;
+    /* Allow huge width for the map */
+    width: 95%;
+}
+
 /* Location Section Redesign */
 .location-section {
     padding: 6rem 5%;
