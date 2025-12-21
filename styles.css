@@ -1476,6 +1476,7 @@ footer {
     padding: 2.5rem;
     /* Spacious Desktop Padding */
     width: 100%;
+    /* Force full width */
     max-width: 1600px;
     /* HUGE CARD - 3x Map Width Support */
     margin: 0 auto;
@@ -1485,6 +1486,8 @@ footer {
     gap: 3rem;
     text-align: left;
     align-items: stretch;
+    box-sizing: border-box;
+    /* Ensure padding doesn't overflow width */
 }
 
 .map-wrapper {
@@ -1716,13 +1719,16 @@ footer {
 @media (max-width: 768px) {
     .location-section {
         padding: 4rem 1rem;
+        /* Reduced horizontal padding */
     }
 
     .location-card {
         flex-direction: column;
-        padding: 2rem 1.5rem;
-        /* Wider padding for less skinny look */
-        gap: 0;
+        padding: 2rem 1rem;
+        /* Tighter padding for more width */
+        width: 100%;
+        /* Ensure it fits */
+        box-sizing: border-box;
     }
 
     .map-wrapper {
@@ -1733,21 +1739,31 @@ footer {
         padding: 0;
     }
 
+    /* Undo Stacked Address Row - Return to Row */
     .address-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        /* Center Vertically */
+        gap: 1rem;
     }
 
     .address-row p {
-        max-width: 100%;
+        width: 100%;
+        /* Text takes full width line? No, side-by-side. */
+        /* Wait, if it's side-by-side with "Get Directions", text shouldn't be 100%. */
+        /* Revert to original behavior: flex: 0 0 auto? */
+        flex: 1;
+        /* Allow text to take space */
+        text-align: left;
+        max-width: none;
     }
 
+    /* "Get Directions" - Align naturally */
     .btn-directions {
-        margin-top: 0.5rem;
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-        display: flex;
+        margin-top: 0;
+        width: auto;
+        /* Not full width */
+        display: inline-flex;
     }
 }
