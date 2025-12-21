@@ -1531,9 +1531,6 @@ footer {
 
 .address-row p {
     margin: 0;
-    flex: 0 0 auto;
-    max-width: 160px;
-    /* Force wrapping as requested */
     line-height: 1.3;
 }
 
