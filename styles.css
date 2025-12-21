@@ -1599,6 +1599,22 @@ footer {
     text-decoration: none;
 }
 
+/* NUCLEAR FIX: Force all icons to be small */
+.info-block svg,
+.info-block img,
+.info-block .icon-box {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    /* Prevent collapse */
+    max-width: 24px !important;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    color: #1D1D1F;
+    /* SVG Fill */
+}
+
 /* Hours Accordion */
 .hours-container {
     border-top: 1px solid #E0E0E0;
