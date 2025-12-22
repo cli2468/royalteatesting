@@ -330,7 +330,7 @@ a {
     animation: letterSlideUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 
     /* Relaxed Stagger */
-    animation-delay: calc(0.9s + (var(--i) * 0.08s));
+    animation-delay: calc(0.5s + (var(--i) * 0.08s));
     color: #1a1a1a;
 }
 
