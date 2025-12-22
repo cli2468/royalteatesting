@@ -327,7 +327,8 @@ a {
 @keyframes letterPop {
     0% {
         opacity: 0;
-        transform: translateY(20px) scale(0.5);
+        transform: translateY(60px) scale(0.8);
+        /* Start from "inside" Royal (below) */
     }
 
     100% {
@@ -1316,33 +1317,27 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+}
 
-    to {
-        opacity: 0;
-
-        50% {
-            transform: translateY(-20px);
-        }
+/* Animations */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
     }
 
-    /* Animations */
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
+    100% {
+        transform: translateX(-50%);
+    }
+}
 
-        100% {
-            transform: translateX(-50%);
-        }
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
     }
 
-    @keyframes float {
-
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-
+    50% {
         transform: translateY(-20px);
     }
 }
@@ -1405,8 +1400,8 @@ footer {
     color: #FFD700;
     /* Gold */
     animation: crownDrop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    animation-delay: 1s;
-    /* Wait for text to appear */
+    animation-delay: 1.5s;
+    /* Wait for Royal to finish */
     opacity: 0;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
     z-index: 1;
