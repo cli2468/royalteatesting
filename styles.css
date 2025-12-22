@@ -303,37 +303,42 @@ a {
 }
 
 /* "LIVE" Animation */
+/* "LIVE" Animation */
 .live-wrapper {
     display: flex;
     gap: 0.2rem;
-    /* Initial gap */
     font-weight: 700;
-    /* Match previous visual */
     text-transform: none;
-    /* Keep Title Case/Mixed */
+    overflow: hidden;
+    /* Masking effect */
+    line-height: 1.2;
+    padding-bottom: 5px;
 }
 
 .letter {
     display: inline-block;
+    will-change: transform;
+    transform: translateY(110%);
+    /* Start fully masked out */
     opacity: 0;
-    transform: translateY(20px);
-    animation: letterPop 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-    /* Streamlined stagger (0.03s) - No waiting between letters */
-    animation-delay: calc(0.9s + (var(--i) * 0.03s));
+
+    /* Slower (0.8s) + Smooth Ease */
+    animation: letterSlideUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+
+    /* Relaxed Stagger */
+    animation-delay: calc(0.9s + (var(--i) * 0.08s));
     color: #1a1a1a;
-    /* Dark text for "Live" */
 }
 
-@keyframes letterPop {
+@keyframes letterSlideUp {
     0% {
         opacity: 0;
-        transform: translateY(60px) scale(0.8);
-        /* Start from "inside" Royal (below) */
+        transform: translateY(110%);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translateY(0);
     }
 }
 
@@ -1400,8 +1405,8 @@ footer {
     color: #FFD700;
     /* Gold */
     animation: crownDrop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    animation-delay: 1.5s;
-    /* Wait for Royal to finish */
+    animation-delay: 1.2s;
+    /* Appear earlier */
     opacity: 0;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
     z-index: 1;
