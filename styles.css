@@ -1073,10 +1073,10 @@ footer {
         /* Perfect Middle Ground */
         background-color: var(--color-primary);
         border-radius: 4px;
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         /* Explicit props */
         transform-origin: center;
-        transform: translateY(0) rotate(0);
+        transform: translateY(0) rotate(0deg) scale(1);
         opacity: 1;
     }
 
