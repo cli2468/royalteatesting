@@ -1400,7 +1400,7 @@ footer {
     color: #FFD700;
     /* Gold */
     animation: crownDrop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    animation-delay: 1.5s;
+    animation-delay: 1.1s;
     /* Wait for Royal to finish */
     opacity: 0;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
