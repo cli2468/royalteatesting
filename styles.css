@@ -311,8 +311,12 @@ a {
     text-transform: none;
     overflow: hidden;
     /* Masking effect */
-    line-height: 1.2;
-    padding-bottom: 5px;
+    line-height: 1;
+    /* Tighten up */
+    padding-bottom: 0;
+    /* Remove padding */
+    margin-bottom: -10px;
+    /* Pull Royal up */
 }
 
 .letter {
