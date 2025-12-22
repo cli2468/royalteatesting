@@ -263,86 +263,96 @@ a {
 }
 
 .hero h1 {
-    font-size: 7rem;
+    font-size: clamp(2rem, 10vw, 4rem) !important;
     line-height: 1.1;
     margin-bottom: 1rem;
-    color: var(--color-primary);
+    color: #000;
     text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
-    /* letter-spacing: -3px; (Removed global, handled by wrappers) */
-    text-transform: none;
+    text-transform: uppercase;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.2rem;
 }
 
-/* "ROYAL" Animation */
-.royal-wrapper {
+/* Common Line Styles */
+.line-crown,
+.line-your,
+.line-cravings {
     font-weight: 700;
     letter-spacing: 2px;
-    text-shadow: 1px 0 0 currentColor, -1px 0 0 currentColor, 0.5px 0 0 currentColor, -0.5px 0 0 currentColor, 2px 2px 0px rgba(255, 255, 255, 0.5);
-    animation: expandRoyal 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
     opacity: 0;
-    /* Star Invisible */
+    text-align: center;
 }
 
-@keyframes expandRoyal {
-    0% {
-        letter-spacing: -20px;
-        opacity: 0;
-        filter: blur(10px);
-        transform: scale(0.8);
-    }
-
-    100% {
-        letter-spacing: 2px;
-        opacity: 1;
-        filter: blur(0);
-        transform: scale(1);
-    }
+/* 1. CROWN */
+/* 1. CROWN */
+.line-crown {
+    animation: wordDrop 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 0.5s;
 }
 
-/* "LIVE" Animation */
-/* "LIVE" Animation */
-.live-wrapper {
-    display: flex;
-    gap: 0.2rem;
-    font-weight: 700;
-    text-transform: none;
-    overflow: hidden;
-    /* Masking effect */
-    line-height: 1;
-    /* Tighten up */
-    padding-bottom: 0;
-    /* Remove padding */
-    margin-bottom: -10px;
-    /* Pull Royal up */
+/* 2. YOUR */
+.line-your {
+    animation: wordDrop 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 1.1s;
 }
 
-.letter {
+/* 3. CRAVINGS */
+.line-cravings {
+    animation: wordDrop 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 1.7s;
+}
+
+.text-red {
     display: inline-block;
-    will-change: transform;
-    transform: translateY(110%);
-    /* Start fully masked out */
-    opacity: 0;
-
-    /* Slower (0.8s) + Smooth Ease */
-    animation: letterSlideUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-
-    /* Relaxed Stagger */
-    animation-delay: calc(0.5s + (var(--i) * 0.08s));
-    color: #1a1a1a;
+    position: relative;
+    color: var(--color-primary) !important;
+    font-weight: 800;
+    font-size: 1.35em;
 }
 
-@keyframes letterSlideUp {
+/* REWRITTEN CROWN LOGIC */
+.crown-icon-redo {
+    position: absolute;
+    top: -60px;
+    /* Final Target Height */
+    left: -12px;
+    width: 38px;
+    height: 38px;
+    color: #FFD700;
+    transform: rotate(-30deg);
+    /* Final Tilt */
+    opacity: 0;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+    /* Shadow Restored */
+    animation: simpleCrownDropV2 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards 1.5s;
+}
+
+@keyframes simpleCrownDropV2 {
+    0% {
+        top: -120px;
+        /* Start High */
+        transform: rotate(-10deg);
+        /* Start Less Tilted */
+        opacity: 0;
+    }
+
+    100% {
+        top: -60px;
+        /* End Low */
+        transform: rotate(-30deg);
+        /* End Tilted */
+        opacity: 1;
+    }
+}
+
+@keyframes wordDrop {
     0% {
         opacity: 0;
-        transform: translateY(110%);
+        transform: translateY(-20px) scale(0.95);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
@@ -379,7 +389,9 @@ a {
     object-fit: contain;
     z-index: 10;
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
-    animation: float 6s ease-in-out infinite;
+    opacity: 0;
+    animation: popCenter 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards, float 6s ease-in-out infinite 1s;
+    animation-delay: 0.2s, 1.2s;
 }
 
 .bowl-side {
@@ -389,16 +401,57 @@ a {
     z-index: 5;
     filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15));
     transition: transform 0.3s;
+    opacity: 0;
 }
 
 .bowl-left {
     transform: translateX(60px) translateY(20px) rotate(-10deg) scale(0.9);
     filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15)) hue-rotate(-30deg);
+    animation: popLeft 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.4s;
 }
 
 .bowl-right {
     transform: translateX(-60px) translateY(20px) rotate(10deg) scale(0.9);
     filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15)) hue-rotate(30deg);
+    animation: popRight 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes popCenter {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes popLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(60px) translateY(20px) rotate(-10deg) scale(0.6);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(60px) translateY(20px) rotate(-10deg) scale(0.9);
+    }
+}
+
+@keyframes popRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px) translateY(20px) rotate(10deg) scale(0.6);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-60px) translateY(20px) rotate(10deg) scale(0.9);
+    }
 }
 
 /* Hover Effects for Fun */
@@ -1073,11 +1126,12 @@ footer {
         /* Perfect Middle Ground */
         background-color: var(--color-primary);
         border-radius: 4px;
-        transition: all 0.3s ease-in-out;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
         /* Explicit props */
         transform-origin: center;
         transform: translateY(0) rotate(0deg) scale(1);
         opacity: 1;
+        will-change: transform, opacity;
     }
 
     /* Animation to X */
@@ -1247,34 +1301,32 @@ footer {
     left: 0;
     width: 100%;
     height: auto;
-    /* Dropdown style */
     bottom: auto;
-    /* Do not extend to bottom */
     background: var(--color-bg);
     padding: 5rem 1.5rem 4.5rem 1.5rem;
-    /* Reduced top padding */
-    display: none;
     z-index: 999;
-    /* Below navbar (which should be 1000+) */
+
+    display: flex;
     flex-direction: column;
     gap: 0.5rem !important;
-    /* Much tighter spacing */
     text-align: left;
-    /* Left align */
     border-bottom: none;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+
+    /* Animation State */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
 }
 
 .mobile-menu-cta {
     background: #c72b3e;
-    /* Red */
     color: #fff !important;
     padding: 0;
     height: 3rem;
-    /* User requested 3rem height */
     border-radius: 0;
-    /* Rectangle */
     margin: 0;
     box-shadow: none;
     width: 100%;
@@ -1289,17 +1341,18 @@ footer {
     text-align: center;
     text-transform: uppercase;
     font-size: 2rem;
-    /* Bigger Bolder Font */
 }
 
 .mobile-menu-overlay.active {
-    display: flex;
-    animation: slideDownMenu 0.3s ease-out;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .mobile-menu-overlay.closing {
+    /* Deprecated but kept to prevent breakage if JS adds it */
     display: flex;
-    animation: slideUpMenu 0.3s ease-in forwards;
 }
 
 .mobile-menu-overlay a {

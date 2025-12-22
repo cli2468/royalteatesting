@@ -78,28 +78,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.querySelector('.mobile-menu-overlay');
 
     if (mobileBtn && mobileMenu) {
-        mobileBtn.addEventListener('click', () => {
-            // Toggle Button Animation
+        const toggleMenu = () => {
             mobileBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
 
             if (mobileMenu.classList.contains('active')) {
-                mobileMenu.classList.add('closing');
-                setTimeout(() => {
-                    mobileMenu.classList.remove('active', 'closing');
-                }, 300);
+                document.body.style.overflow = 'hidden';
             } else {
-                mobileMenu.classList.add('active');
+                document.body.style.overflow = '';
             }
+        };
+
+        mobileBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
         });
 
         // Close menu when a link is clicked
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.add('closing');
-                setTimeout(() => {
-                    mobileMenu.classList.remove('active', 'closing');
-                }, 300);
+                if (mobileMenu.classList.contains('active')) {
+                    toggleMenu();
+                }
             });
+        });
+
+        // Close on click outside
+        document.addEventListener('click', (e) => {
+            if (mobileMenu.classList.contains('active') && !mobileMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
+                toggleMenu();
+            }
         });
     }
     // Scroll To Top Button
