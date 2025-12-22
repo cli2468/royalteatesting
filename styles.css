@@ -317,10 +317,9 @@ a {
     display: inline-block;
     opacity: 0;
     transform: translateY(20px);
-    animation: letterPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-    /* Faster pop with smooth snap */
-    animation-delay: calc(0.9s + (var(--i) * 0.06s));
-    /* Earlier start, tighter stagger */
+    animation: letterPop 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    /* Streamlined stagger (0.03s) - No waiting between letters */
+    animation-delay: calc(0.9s + (var(--i) * 0.03s));
     color: #1a1a1a;
     /* Dark text for "Live" */
 }
