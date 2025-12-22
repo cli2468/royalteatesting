@@ -55,6 +55,19 @@ a {
     display: none;
 }
 
+/* Navbar Animation */
+@keyframes slideInNav {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -69,6 +82,7 @@ a {
     z-index: 1000;
     background: rgba(255, 209, 148, 0.95);
     backdrop-filter: blur(5px);
+    animation: slideInNav 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 .logo {
