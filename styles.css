@@ -1379,9 +1379,11 @@ footer {
 }
 
 .hero-title {
-    animation-delay: 0.2s;
+    /* animation-delay: 0.2s; Removed to let inner items control timing */
+    animation: none !important;
+    opacity: 1;
     position: relative;
-    display: inline-block;
+    /* display: inline-block; REMOVED - breaks flex layout */
 }
 
 .hero-subtitle {
