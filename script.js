@@ -94,11 +94,23 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // About Content (Paragraphs only - Headers are handled above)
-    document.querySelectorAll('.about-section p').forEach(el => {
-        el.classList.add('reveal');
-        revealObserver.observe(el);
+    // Custom Observer for Story Text (Hybrid Trigger)
+    const storyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: '0px 0px -100px 0px'
     });
+
+    // About Text Block
+    const aboutText = document.querySelector('.about-text');
+    if (aboutText) {
+        storyObserver.observe(aboutText);
+    }
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const mobileMenu = document.querySelector('.mobile-menu-overlay');

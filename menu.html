@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Royal Tea - Boba & Poke</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Zilla+Slab:wght@400;600;700&family=Ma+Shan+Zheng&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=menu">
+</head>
+
+<body class="menu-page">
+
+    <!-- Simplified Navbar -->
+    <nav class="navbar menu-navbar">
+        <div class="nav-left">
+            <a href="index.html" class="back-link">← Back Home</a>
+        </div>
+        <a href="index.html" class="logo">
+            Royal Tea<span class="chinese-logo">皇茶</span>
+        </a>
+        <div class="nav-right">
+            <!-- DoorDash -->
+            <a href="https://www.doordash.com/store/royal-tea-%E2%80%93-boba-&-pok%C3%A9-highland-23330580/12859699/?srsltid=AfmBOorZ8yhAwu0ePJOuU_rg51Mn4Mpi4cTuWXJfg6-DS0z6kFb9Ko8y"
+                target="_blank" class="nav-icon-link" aria-label="Order on DoorDash">
+                <img src="assets/images/doordash-icon.png" alt="DoorDash" class="nav-app-icon">
+            </a>
+
+            <!-- Uber Eats -->
+            <a href="https://www.ubereats.com/store/royal-tea-boba-and-poke/yNRxNpgwSMirOrnwjDHkEw?srsltid=AfmBOopC413VAGac2o74Esc-JVFu53KhtH5_AMFUzv6nbAj4MWfyY1hR"
+                target="_blank" class="nav-icon-link" aria-label="Order on Uber Eats">
+                <img src="assets/images/ubereats-icon.png" alt="Uber Eats" class="nav-app-icon">
+            </a>
+            <a href="https://www.royalteaone.com/order" class="btn-nav-cta">Order Now</a>
+        </div>
+        <!-- Mobile Toggle (Same logic) -->
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <a href="index.html">Home</a>
+        <a href="#milk-tea">Milk Tea</a>
+        <a href="#fruit-tea">Fruit Tea</a>
+        <a href="#poke">Poke Bowls</a>
+        <a href="https://www.royalteaone.com/order" class="mobile-menu-cta">ORDER NOW</a>
+    </div>
+
+    <!-- Menu Header -->
+    <header class="menu-hero">
+        <h1 class="menu-title">The Royal Collection</h1>
+        <p class="menu-subtitle">Hand-crafted flavors, made fresh daily.</p>
+    </header>
+
+    <!-- Menu Content -->
+    <main class="full-menu-container">
+
+        <!-- Milk Teas -->
+        <section id="milk-tea" class="menu-category">
+            <h2 class="category-title">Signature Milk Teas</h2>
+            <div class="menu-items-grid">
+                <!-- Item 1 -->
+                <div class="menu-item-detailed reveal">
+                    <img src="assets/images/royal-milk-tea.png" alt="Royal Milk Tea" class="item-img"
+                        onerror="this.src='https://placehold.co/300x400/f3e8ff/333?text=Royal+Milk+Tea'">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3>Royal Milk Tea</h3>
+                            <span class="item-price">$5.50</span>
+                        </div>
+                        <p class="item-desc">Our signature black tea blend with rich, creamy milk. Authentic and bold.
+                        </p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="menu-item-detailed reveal">
+                    <img src="assets/images/brown-sugar.png" alt="Brown Sugar Boba" class="item-img"
+                        onerror="this.src='https://placehold.co/300x400/fff7ed/333?text=Brown+Sugar'">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3>Brown Sugar Boba</h3>
+                            <span class="item-price">$6.25</span>
+                        </div>
+                        <p class="item-desc">Fresh boba slow-cooked in tigered brown sugar syrup. Sweet, warm, and
+                            chewy.</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="menu-item-detailed reveal">
+                    <img src="assets/images/taro-milk.png" alt="Taro Milk Tea" class="item-img"
+                        onerror="this.src='https://placehold.co/300x400/e9d5ff/333?text=Taro+Milk'">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3>Taro Milk Tea</h3>
+                            <span class="item-price">$5.75</span>
+                        </div>
+                        <p class="item-desc">Sweet, nutty, and vibrant purple. Made with real taro for a smooth texture.
+                        </p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="menu-item-detailed reveal">
+                    <img src="assets/images/matcha-latte.png" alt="Matcha Latte" class="item-img"
+                        onerror="this.src='https://placehold.co/300x400/dcfce7/333?text=Matcha'">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3>Uji Matcha Latte</h3>
+                            <span class="item-price">$6.00</span>
+                        </div>
+                        <p class="item-desc">Premium Japanese matcha whisked to perfection with fresh milk.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fruit Teas -->
+        <section id="fruit-tea" class="menu-category">
+            <h2 class="category-title">Fresh Fruit Teas</h2>
+            <div class="menu-items-grid">
+                <div class="menu-item-detailed reveal">
+                    <img src="assets/images/passion-fruit.png" alt="Passion Fruit Green Tea" class="item-img"
+                        onerror="this.src='https://placehold.co/300x400/fef3c7/333?text=Passion+Fruit'">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3>Passion Fruit Green Tea</h3>
+                            <span class="item-price">$5.50</span>
+                        </div>
+                        <p class="item-desc">Tart, tropical passion fruit paired with refreshing jasmine green tea.</p>
+                    </div>
+                </div>
+                <div class="menu-item-detailed reveal">
+                    <img src="assets/images/mango-green.png" alt="Mango Green Tea" class="item-img"
+                        onerror="this.src='https://placehold.co/300x400/ffedd5/333?text=Mango'">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3>Mango Green Tea</h3>
+                            <span class="item-price">$5.50</span>
+                        </div>
+                        <p class="item-desc">Sweet, ripe mango pulp shaken with premium tea. A summer favorite.</p>
+                    </div>
+                </div>
+                <div class="menu-item-detailed reveal">
+                    <img src="assets/images/strawberry-tea.png" alt="Strawberry Black Tea" class="item-img"
+                        onerror="this.src='https://placehold.co/300x400/fee2e2/333?text=Strawberry'">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3>Strawberry Black Tea</h3>
+                            <span class="item-price">$5.50</span>
+                        </div>
+                        <p class="item-desc">Real strawberry puree enhances the depth of our house black tea.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Poke Bowls -->
+        <section id="poke" class="menu-category">
+            <h2 class="category-title">Signature Poke Bowls</h2>
+            <div class="menu-items-grid">
+                <div class="menu-item-detailed reveal">
+                    <img src="assets/images/ahi-tuna-bowl.png" alt="The King Bowl" class="item-img"
+                        onerror="this.src='https://placehold.co/300x300/e0f2fe/333?text=The+King'">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3>The King (Ahi Tuna)</h3>
+                            <span class="item-price">$13.95</span>
+                        </div>
+                        <p class="item-desc">Fresh Ahi Tuna, cucumber, edamame, seaweed salad, masago, sesame seeds, and
+                            poke sauce.</p>
+                    </div>
+                </div>
+                <div class="menu-item-detailed reveal">
+                    <img src="assets/images/salmon-bowl.png" alt="The Queen Bowl" class="item-img"
+                        onerror="this.src='https://placehold.co/300x300/ffedd5/333?text=The+Queen'">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3>The Queen (Salmon)</h3>
+                            <span class="item-price">$13.95</span>
+                        </div>
+                        <p class="item-desc">Fresh Salmon, avocado, crab meat, corn, crispy onion, spicy mayo, and eel
+                            sauce.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Royal Tea. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Script needs to handle active class for text/headers which exist here too. -->
+    <script>
+        // Inline quick fix to ensure reveal works on this page specifically if main script relies on specific selectors
+        // But main script uses .reveal, so it should work automatically!
+    </script>
+</body>
+
+</html>
