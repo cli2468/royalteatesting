@@ -16,6 +16,7 @@
 <body class="menu-page">
 
     <!-- Simplified Navbar -->
+    <!-- Simplified Navbar -->
     <nav class="navbar menu-navbar">
         <div class="nav-left">
             <a href="index.html" class="back-link">← Back Home</a>
@@ -23,21 +24,6 @@
         <a href="index.html" class="logo">
             Royal Tea<span class="chinese-logo">皇茶</span>
         </a>
-        <div class="nav-right">
-            <!-- DoorDash -->
-            <a href="https://www.doordash.com/store/royal-tea-%E2%80%93-boba-&-pok%C3%A9-highland-23330580/12859699/?srsltid=AfmBOorZ8yhAwu0ePJOuU_rg51Mn4Mpi4cTuWXJfg6-DS0z6kFb9Ko8y"
-                target="_blank" class="nav-icon-link" aria-label="Order on DoorDash">
-                <img src="assets/images/doordash-icon.png" alt="DoorDash" class="nav-app-icon">
-            </a>
-
-            <!-- Uber Eats -->
-            <a href="https://www.ubereats.com/store/royal-tea-boba-and-poke/yNRxNpgwSMirOrnwjDHkEw?srsltid=AfmBOopC413VAGac2o74Esc-JVFu53KhtH5_AMFUzv6nbAj4MWfyY1hR"
-                target="_blank" class="nav-icon-link" aria-label="Order on Uber Eats">
-                <img src="assets/images/ubereats-icon.png" alt="Uber Eats" class="nav-app-icon">
-            </a>
-            <a href="https://orderonlinemenu.com/RoyalTeaHighlandIn" class="btn-nav-cta">Order Now</a>
-        </div>
-        <!-- Mobile Toggle (Same logic) -->
         <button class="mobile-menu-btn" aria-label="Toggle Menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -56,22 +42,46 @@
 
     <!-- Menu Header -->
     <header class="menu-hero">
-        <h1 class="menu-title">The Royal Collection</h1>
-        <div class="menu-actions-card">
-            <div class="menu-hero-actions">
-                <!-- DoorDash -->
-                <a href="https://www.doordash.com/store/royal-tea-%E2%80%93-boba-&-pok%C3%A9-highland-23330580/12859699/?srsltid=AfmBOorZ8yhAwu0ePJOuU_rg51Mn4Mpi4cTuWXJfg6-DS0z6kFb9Ko8y"
-                    target="_blank" class="hero-icon-link" aria-label="Order on DoorDash">
-                    <img src="assets/images/doordash-icon.png" alt="DoorDash">
-                </a>
-                <!-- Uber Eats -->
-                <a href="https://www.ubereats.com/store/royal-tea-boba-and-poke/yNRxNpgwSMirOrnwjDHkEw?srsltid=AfmBOopC413VAGac2o74Esc-JVFu53KhtH5_AMFUzv6nbAj4MWfyY1hR"
-                    target="_blank" class="hero-icon-link" aria-label="Order on Uber Eats">
-                    <img src="assets/images/ubereats-icon.png" alt="Uber Eats">
-                </a>
-                <!-- Pickup -->
-                <a href="https://orderonlinemenu.com/RoyalTeaHighlandIn" class="btn-hero-pickup">Order for Pickup</a>
-            </div>
+        <!-- Circular Title + Image -->
+        <div class="hero-visual-center">
+            <svg class="circular-text-svg" viewBox="0 0 500 500">
+                <defs>
+                    <path id="circlePath" d="M 250, 250 m -180, 0 a 180,180 0 0,1 360,0 a 180,180 0 0,1 -360,0 " />
+                </defs>
+                <text class="circular-text-content">
+                    <textPath xlink:href="#circlePath" startOffset="50%" text-anchor="middle" fill="#000">
+                        THE ROYAL COLLECTION • THE ROYAL COLLECTION •
+                    </textPath>
+                </text>
+            </svg>
+            <img src="https://placehold.co/400x400/FFBD69/white?text=Royal+Tea" alt="Royal Tea Lifestyle"
+                class="hero-center-img">
+        </div>
+
+        <!-- Service Cards -->
+        <div class="hero-service-cards">
+            <!-- DoorDash -->
+            <a href="https://www.doordash.com/store/royal-tea-%E2%80%93-boba-&-pok%C3%A9-highland-23330580/12859699/?srsltid=AfmBOorZ8yhAwu0ePJOuU_rg51Mn4Mpi4cTuWXJfg6-DS0z6kFb9Ko8y"
+                target="_blank" class="service-card" aria-label="Order on DoorDash">
+                <img src="assets/images/doordash-icon.png" alt="DoorDash">
+            </a>
+            <!-- Uber Eats -->
+            <a href="https://www.ubereats.com/store/royal-tea-boba-and-poke/yNRxNpgwSMirOrnwjDHkEw?srsltid=AfmBOopC413VAGac2o74Esc-JVFu53KhtH5_AMFUzv6nbAj4MWfyY1hR"
+                target="_blank" class="service-card" aria-label="Order on Uber Eats">
+                <img src="assets/images/ubereats-icon.png" alt="Uber Eats">
+            </a>
+            <!-- Pickup -->
+            <a href="https://orderonlinemenu.com/RoyalTeaHighlandIn" class="service-card" aria-label="Pickup">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="50" height="50" style="color: #e4002b;">
+                    <path d="M16 11V7a4 4 0 0 0-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Subtext -->
+        <div class="menu-hero-subtext">
+            Get it delivered - Or pick it up!
         </div>
     </header>
 

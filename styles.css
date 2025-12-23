@@ -2159,6 +2159,10 @@ body.menu-page {
     min-height: 100vh;
 }
 
+.menu-navbar {
+    justify-content: flex-start;
+}
+
 .menu-navbar .back-link {
     font-weight: 700;
     color: var(--color-primary);
@@ -2199,61 +2203,120 @@ body.menu-page {
     z-index: 2;
     font-family: var(--font-display);
     font-size: 3.5rem;
-    margin-bottom: 2rem;
+    line-height: 1.1;
+    font-weight: 900;
+    margin-bottom: 2.5rem;
     color: #000;
+    text-transform: none !important;
 }
 
-/* Actions Card Container */
-.menu-actions-card {
+/* Center Visual Wrapper */
+.hero-visual-center {
+    margin: 1rem auto 2rem;
     position: relative;
-    z-index: 2;
-    background: #fff;
-    padding: 1.5rem 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    /* Center it */
-    margin: 0 auto;
-    max-width: 90%;
-}
-
-/* Actions Bar (Flex inside Card) */
-.menu-hero-actions {
+    z-index: 1;
+    width: 450px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+}
+
+.hero-center-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 8px solid #fff;
+    position: relative;
+    z-index: 5;
+}
+
+/* Curved Text SVG */
+.circular-text-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    animation: spinSlow 40s linear infinite;
+}
+
+@keyframes spinSlow {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Service Cards Container */
+.hero-service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 5;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
 }
 
-.hero-icon-link img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    transition: transform 0.2s;
-}
-
-.hero-icon-link:hover img {
-    transform: scale(1.1);
-}
-
-.btn-hero-pickup {
-    background: var(--color-primary);
-    color: #fff;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
+/* Individual Service Cards */
+/* Individual Service Cards */
+.service-card {
+    background: #fff;
+    border-radius: 25px;
+    width: 220px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 15px rgba(199, 43, 62, 0.3);
-    transition: all 0.3s ease;
 }
 
-.btn-hero-pickup:hover {
-    background: #a01d2d;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(199, 43, 62, 0.4);
+.service-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(199, 43, 62, 0.2);
 }
+
+.service-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Subtext */
+.menu-hero-subtext {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    margin-top: 1rem;
+    max-width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hide Logo on Desktop */
+@media (min-width: 992px) {
+    .menu-navbar .logo {
+        display: none !important;
+    }
+}
+
+/* =========================================
+   RESTORED MENU LAYOUT STYLES
+   ========================================= */
 
 .full-menu-container {
     padding: 4rem 5%;
@@ -2336,15 +2399,41 @@ body.menu-page {
     margin: 0;
 }
 
-/* Responsive Menu Page */
+/* Mobile Adjustments for Menu Page */
 @media (max-width: 768px) {
+    .hero-service-cards {
+        flex-wrap: nowrap;
+        gap: 0.8rem;
+    }
+
+    .service-card {
+        width: 100px;
+        height: 60px;
+        border-radius: 18px;
+    }
+
+    .service-card img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .hero-visual-center {
+        width: 340px;
+        height: 340px;
+        margin-bottom: 2rem;
+    }
+
+    .hero-center-img {
+        width: 220px;
+        height: 220px;
+    }
+
     .menu-title {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
     .menu-items-grid {
         grid-template-columns: 1fr;
-        /* Single column on mobile */
     }
 
     .item-img {
