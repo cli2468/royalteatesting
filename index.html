@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles.css?v=final">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <style>
-        /* INJECTED CROWN FIX - FINAL ANIMATED */
+        /* INJECTED CROWN FIX - STATIC FINAL */
         .crown-final-fix {
             position: absolute;
             top: -23px;
@@ -24,24 +24,9 @@
             height: 44px;
             color: #FFD700;
             transform: rotate(-30deg);
-            opacity: 0;
+            opacity: 1;
             filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
             z-index: 100;
-            animation: crownFinalDropAnim 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards 2.1s;
-        }
-
-        @keyframes crownFinalDropAnim {
-            0% {
-                top: -100px;
-                transform: rotate(-10deg);
-                opacity: 0;
-            }
-
-            100% {
-                top: -23px;
-                transform: rotate(-30deg);
-                opacity: 1;
-            }
         }
     </style>
 </head>
@@ -183,19 +168,34 @@
             <hr class="section-divider">
             <div class="about-grid">
                 <div class="about-headers">
-                    <h2 class="section-title">Our Story</h2>
+                    <h2 class="section-title slide-up-wrapper"><span class="letter">O</span><span
+                            class="letter">u</span><span class="letter">r</span><span class="space">&nbsp;</span><span
+                            class="letter">S</span><span class="letter">t</span><span class="letter">o</span><span
+                            class="letter">r</span><span class="letter">y</span></h2>
                     <h3 class="about-subheader">From the Streets of Taiwan to Northwest Indiana</h3>
                 </div>
+
+                <!-- Map Buffer (Restored) -->
+                <div class="map-buffer">
+                    <svg class="map-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid meet">
+                        <g class="taiwan-island">
+                            <image class="taiwan-icon" href="assets/images/taiwan_map.png" x="30" y="5" width="50"
+                                height="90" />
+                        </g>
+                        <path class="journey-line" d="M50,40 Q90,10 130,40 T170,40" fill="none" stroke="#1a1a1a"
+                            stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round" />
+                        <g class="x-mark">
+                            <path d="M165,35 L175,45" stroke="#C72B3E" stroke-width="3" stroke-linecap="round" />
+                            <path d="M175,35 L165,45" stroke="#C72B3E" stroke-width="3" stroke-linecap="round" />
+                        </g>
+                    </svg>
+                </div>
+
                 <div class="about-collage">
                     <div class="collage-item item-1">
                     </div>
                     <div class="collage-item item-2">
                     </div>
-                    <svg class="collage-doodle" viewBox="0 0 100 100" fill="none" stroke="#C72B3E" stroke-width="5"
-                        stroke-linecap="round">
-                        <path d="M10,80 Q30,10 60,50 T90,30" transform="rotate(-10 50 50)" />
-                        <path d="M70,10 L85,25 L75,35" stroke-width="3" />
-                    </svg>
                 </div>
                 <div class="about-text">
                     <p>We're dedicated to bringing the genuine flavors of Taiwanese boba and fresh, vibrant poke bowls
@@ -381,7 +381,7 @@
         </svg>
     </button>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=final"></script>
 </body>
 
 </html>

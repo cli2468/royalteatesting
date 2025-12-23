@@ -49,12 +49,38 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.1
     });
 
+    // Custom Observer for Titles (Delayed trigger: 20% from bottom)
+    const titleObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -20% 0px'
+    });
+
     // Add 'reveal' class to elements we want to animate if not present
-    // Section Titles
+    // Section Titles (Delayed)
     document.querySelectorAll('.section-title').forEach(el => {
         el.classList.add('reveal');
-        revealObserver.observe(el);
+        titleObserver.observe(el);
     });
+
+    // About Subheader (Delayed)
+    const subheader = document.querySelector('.about-subheader');
+    if (subheader) {
+        titleObserver.observe(subheader);
+    }
+
+    // Map Buffer
+    const map = document.querySelector('.map-buffer');
+    if (map) revealObserver.observe(map);
+
+    // About Collage
+    const collage = document.querySelector('.about-collage');
+    if (collage) revealObserver.observe(collage);
 
     // Tea Cards (Specific Pop Animation)
     document.querySelectorAll('.tea-card').forEach(el => {
@@ -68,8 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // About Content
-    document.querySelectorAll('.about-section p, .about-section h2, .about-subheader').forEach(el => {
+    // About Content (Paragraphs only - Headers are handled above)
+    document.querySelectorAll('.about-section p').forEach(el => {
         el.classList.add('reveal');
         revealObserver.observe(el);
     });
