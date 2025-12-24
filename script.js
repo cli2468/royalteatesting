@@ -106,11 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
         rootMargin: '0px 0px -100px 0px'
     });
 
-    // About Text Block
-    const aboutText = document.querySelector('.about-text');
-    if (aboutText) {
-        storyObserver.observe(aboutText);
-    }
+    // About Text Paragraphs (Individual Reveal)
+    document.querySelectorAll('.about-text p').forEach(p => {
+        storyObserver.observe(p);
+    });
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const mobileMenu = document.querySelector('.mobile-menu-overlay');

@@ -2131,22 +2131,27 @@ footer {
     font-size: 1.3rem;
     max-width: 800px;
     margin: 2rem auto 0;
-
-    /* Animation Logic */
-    opacity: 0;
-    transform: translateX(-100px) translateY(0) !important;
-    /* Force X-axis only */
-    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.about-text.active {
-    opacity: 1;
-    transform: translateX(0) translateY(0) !important;
+    /* No animation on container */
 }
 
 .about-text p {
     margin-bottom: 2rem;
     line-height: 1.6;
+
+    /* Animation Logic per paragraph */
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* 2nd Paragraph: Slide from Right */
+.about-text p:nth-child(2) {
+    transform: translateX(100px);
+}
+
+.about-text p.active {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* =========================================
@@ -2748,7 +2753,7 @@ body.menu-page {
     border-radius: 8px;
     font-size: 1.1rem;
     color: var(--color-text);
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.15);
     display: flex;
@@ -2774,4 +2779,89 @@ body.menu-page {
     background: transparent;
     border-color: var(--color-primary);
     color: var(--color-primary);
+}
+
+/* =========================================
+   ITEM DESCRIPTION STYLES
+   ========================================= */
+.menu-item-wrapper {
+    margin-bottom: 0.8rem;
+}
+
+.menu-item-wrapper .menu-list-item {
+    margin-bottom: 0;
+}
+
+.item-description {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.3;
+    padding-right: 4rem;
+    margin-top: -0.2rem;
+    display: block;
+
+}
+
+/* =========================================
+   MOBILE MENU CARD LINK
+   ========================================= */
+.mobile-menu-link-card {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .mobile-menu-link-card {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-primary);
+        color: white;
+        padding: 0.3rem 0.9rem;
+        border-radius: 50px;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-left: auto;
+        /* Push to right next to hamburger */
+        margin-right: 50px;
+        box-shadow: 0 4px 6px rgba(199, 43, 62, 0.2);
+        transition: transform 0.2s ease;
+    }
+
+    .mobile-menu-link-card:hover {
+        transform: translateY(-2px);
+        color: white;
+    }
+}
+
+/* =========================================
+   ABOUT SECTION GRADIENT
+   ========================================= */
+.about-section {
+    background-color: var(--color-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 40%, rgba(255, 182, 193, 0.5), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure content sits above the glow */
+.about-section .container {
+    position: relative;
+    z-index: 1;
 }
