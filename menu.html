@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Zilla+Slab:wght@400;600;700&family=Ma+Shan+Zheng&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=menu">
+    <link rel="stylesheet" href="styles.css?v=menu_polish">
 </head>
 
 <body class="menu-page">
@@ -46,11 +46,11 @@
         <div class="hero-visual-center">
             <svg class="circular-text-svg" viewBox="0 0 500 500">
                 <defs>
-                    <path id="circlePath" d="M 250, 250 m -180, 0 a 180,180 0 0,1 360,0 a 180,180 0 0,1 -360,0 " />
+                    <path id="circlePath" d="M 250, 250 m -230, 0 a 230,230 0 0,1 460,0 a 230,230 0 0,1 -460,0 " />
                 </defs>
                 <text class="circular-text-content">
-                    <textPath xlink:href="#circlePath" startOffset="50%" text-anchor="middle" fill="#000">
-                        THE ROYAL COLLECTION • THE ROYAL COLLECTION •
+                    <textPath xlink:href="#circlePath" startOffset="50%" text-anchor="middle" fill="#C72B3E">
+                        THE ROYAL COLLECTION
                     </textPath>
                 </text>
             </svg>
@@ -88,131 +88,300 @@
     <!-- Menu Content -->
     <main class="full-menu-container">
 
-        <!-- Milk Teas -->
-        <section id="milk-tea" class="menu-category">
-            <h2 class="category-title">Signature Milk Teas</h2>
-            <div class="menu-items-grid">
-                <!-- Item 1 -->
-                <div class="menu-item-detailed reveal">
-                    <img src="assets/images/royal-milk-tea.png" alt="Royal Milk Tea" class="item-img"
-                        onerror="this.src='https://placehold.co/300x400/f3e8ff/333?text=Royal+Milk+Tea'">
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3>Royal Milk Tea</h3>
-                            <span class="item-price">$5.50</span>
+        <!-- 1. Milk Teas -->
+        <section id="milk-tea" class="menu-category accordion-item">
+            <button class="accordion-header">
+                <h2 class="category-title">Milk Teas</h2>
+                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <div class="menu-items-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-item-detailed reveal">
+                        <img src="assets/images/royal-milk-tea.png" alt="Royal Milk Tea" class="item-img"
+                            onerror="this.src='https://placehold.co/300x400/f3e8ff/333?text=Royal+Milk+Tea'">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h3>Royal Milk Tea</h3>
+                                <span class="item-price">$5.50</span>
+                            </div>
+                            <p class="item-desc">Our signature black tea blend with rich, creamy milk. Authentic and
+                                bold.</p>
                         </div>
-                        <p class="item-desc">Our signature black tea blend with rich, creamy milk. Authentic and bold.
-                        </p>
                     </div>
-                </div>
-                <!-- Item 2 -->
-                <div class="menu-item-detailed reveal">
-                    <img src="assets/images/brown-sugar.png" alt="Brown Sugar Boba" class="item-img"
-                        onerror="this.src='https://placehold.co/300x400/fff7ed/333?text=Brown+Sugar'">
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3>Brown Sugar Boba</h3>
-                            <span class="item-price">$6.25</span>
+                    <!-- Item 2 -->
+                    <div class="menu-item-detailed reveal">
+                        <img src="assets/images/brown-sugar.png" alt="Brown Sugar Boba" class="item-img"
+                            onerror="this.src='https://placehold.co/300x400/fff7ed/333?text=Brown+Sugar'">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h3>Brown Sugar Boba</h3>
+                                <span class="item-price">$6.25</span>
+                            </div>
+                            <p class="item-desc">Fresh boba slow-cooked in tigered brown sugar syrup. Sweet, warm, and
+                                chewy.</p>
                         </div>
-                        <p class="item-desc">Fresh boba slow-cooked in tigered brown sugar syrup. Sweet, warm, and
-                            chewy.</p>
                     </div>
-                </div>
-                <!-- Item 3 -->
-                <div class="menu-item-detailed reveal">
-                    <img src="assets/images/taro-milk.png" alt="Taro Milk Tea" class="item-img"
-                        onerror="this.src='https://placehold.co/300x400/e9d5ff/333?text=Taro+Milk'">
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3>Taro Milk Tea</h3>
-                            <span class="item-price">$5.75</span>
+                    <!-- Item 3 -->
+                    <div class="menu-item-detailed reveal">
+                        <img src="assets/images/taro-milk.png" alt="Taro Milk Tea" class="item-img"
+                            onerror="this.src='https://placehold.co/300x400/e9d5ff/333?text=Taro+Milk'">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h3>Taro Milk Tea</h3>
+                                <span class="item-price">$5.75</span>
+                            </div>
+                            <p class="item-desc">Sweet, nutty, and vibrant purple. Made with real taro for a smooth
+                                texture.</p>
                         </div>
-                        <p class="item-desc">Sweet, nutty, and vibrant purple. Made with real taro for a smooth texture.
-                        </p>
                     </div>
-                </div>
-                <!-- Item 4 -->
-                <div class="menu-item-detailed reveal">
-                    <img src="assets/images/matcha-latte.png" alt="Matcha Latte" class="item-img"
-                        onerror="this.src='https://placehold.co/300x400/dcfce7/333?text=Matcha'">
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3>Uji Matcha Latte</h3>
-                            <span class="item-price">$6.00</span>
+                    <!-- Item 4 -->
+                    <div class="menu-item-detailed reveal">
+                        <img src="assets/images/matcha-latte.png" alt="Matcha Latte" class="item-img"
+                            onerror="this.src='https://placehold.co/300x400/dcfce7/333?text=Matcha'">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h3>Uji Matcha Latte</h3>
+                                <span class="item-price">$6.00</span>
+                            </div>
+                            <p class="item-desc">Premium Japanese matcha whisked to perfection with fresh milk.</p>
                         </div>
-                        <p class="item-desc">Premium Japanese matcha whisked to perfection with fresh milk.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Fruit Teas -->
-        <section id="fruit-tea" class="menu-category">
-            <h2 class="category-title">Fresh Fruit Teas</h2>
-            <div class="menu-items-grid">
-                <div class="menu-item-detailed reveal">
-                    <img src="assets/images/passion-fruit.png" alt="Passion Fruit Green Tea" class="item-img"
-                        onerror="this.src='https://placehold.co/300x400/fef3c7/333?text=Passion+Fruit'">
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3>Passion Fruit Green Tea</h3>
-                            <span class="item-price">$5.50</span>
-                        </div>
-                        <p class="item-desc">Tart, tropical passion fruit paired with refreshing jasmine green tea.</p>
-                    </div>
-                </div>
-                <div class="menu-item-detailed reveal">
-                    <img src="assets/images/mango-green.png" alt="Mango Green Tea" class="item-img"
-                        onerror="this.src='https://placehold.co/300x400/ffedd5/333?text=Mango'">
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3>Mango Green Tea</h3>
-                            <span class="item-price">$5.50</span>
-                        </div>
-                        <p class="item-desc">Sweet, ripe mango pulp shaken with premium tea. A summer favorite.</p>
-                    </div>
-                </div>
-                <div class="menu-item-detailed reveal">
-                    <img src="assets/images/strawberry-tea.png" alt="Strawberry Black Tea" class="item-img"
-                        onerror="this.src='https://placehold.co/300x400/fee2e2/333?text=Strawberry'">
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3>Strawberry Black Tea</h3>
-                            <span class="item-price">$5.50</span>
-                        </div>
-                        <p class="item-desc">Real strawberry puree enhances the depth of our house black tea.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Poke Bowls -->
-        <section id="poke" class="menu-category">
-            <h2 class="category-title">Signature Poke Bowls</h2>
-            <div class="menu-items-grid">
-                <div class="menu-item-detailed reveal">
-                    <img src="assets/images/ahi-tuna-bowl.png" alt="The King Bowl" class="item-img"
-                        onerror="this.src='https://placehold.co/300x300/e0f2fe/333?text=The+King'">
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3>The King (Ahi Tuna)</h3>
-                            <span class="item-price">$13.95</span>
+        <!-- 2. Poke Bowl -->
+        <section id="poke" class="menu-category accordion-item">
+            <button class="accordion-header">
+                <h2 class="category-title">Poke Bowl</h2>
+                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <div class="menu-items-grid">
+                    <div class="menu-item-detailed reveal">
+                        <img src="assets/images/ahi-tuna-bowl.png" alt="The King Bowl" class="item-img"
+                            onerror="this.src='https://placehold.co/300x300/e0f2fe/333?text=The+King'">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h3>The King (Ahi Tuna)</h3>
+                                <span class="item-price">$13.95</span>
+                            </div>
+                            <p class="item-desc">Fresh Ahi Tuna, cucumber, edamame, seaweed salad, masago, sesame seeds,
+                                and poke sauce.</p>
                         </div>
-                        <p class="item-desc">Fresh Ahi Tuna, cucumber, edamame, seaweed salad, masago, sesame seeds, and
-                            poke sauce.</p>
+                    </div>
+                    <div class="menu-item-detailed reveal">
+                        <img src="assets/images/salmon-bowl.png" alt="The Queen Bowl" class="item-img"
+                            onerror="this.src='https://placehold.co/300x300/ffedd5/333?text=The+Queen'">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h3>The Queen (Salmon)</h3>
+                                <span class="item-price">$13.95</span>
+                            </div>
+                            <p class="item-desc">Fresh Salmon, avocado, crab meat, corn, crispy onion, spicy mayo, and
+                                eel sauce.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="menu-item-detailed reveal">
-                    <img src="assets/images/salmon-bowl.png" alt="The Queen Bowl" class="item-img"
-                        onerror="this.src='https://placehold.co/300x300/ffedd5/333?text=The+Queen'">
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3>The Queen (Salmon)</h3>
-                            <span class="item-price">$13.95</span>
+            </div>
+        </section>
+
+        <!-- 3. Rolled Ice Cream -->
+        <section id="rolled-ice-cream" class="menu-category accordion-item">
+            <button class="accordion-header">
+                <h2 class="category-title">Rolled Ice Cream</h2>
+                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <div class="menu-items-grid">
+                    <p style="padding: 1rem; color: #666;">Selection coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Bubble Waffles -->
+        <section id="bubble-waffles" class="menu-category accordion-item">
+            <button class="accordion-header">
+                <h2 class="category-title">Bubble Waffles</h2>
+                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <div class="menu-items-grid">
+                    <p style="padding: 1rem; color: #666;">Selection coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Fruit Tea -->
+        <section id="fruit-tea" class="menu-category accordion-item">
+            <button class="accordion-header">
+                <h2 class="category-title">Fruit Tea</h2>
+                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <div class="menu-items-grid">
+                    <div class="menu-item-detailed reveal">
+                        <img src="assets/images/passion-fruit.png" alt="Passion Fruit Green Tea" class="item-img"
+                            onerror="this.src='https://placehold.co/300x400/fef3c7/333?text=Passion+Fruit'">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h3>Passion Fruit Green Tea</h3>
+                                <span class="item-price">$5.50</span>
+                            </div>
+                            <p class="item-desc">Tart, tropical passion fruit paired with refreshing jasmine green tea.
+                            </p>
                         </div>
-                        <p class="item-desc">Fresh Salmon, avocado, crab meat, corn, crispy onion, spicy mayo, and eel
-                            sauce.</p>
                     </div>
+                    <div class="menu-item-detailed reveal">
+                        <img src="assets/images/mango-green.png" alt="Mango Green Tea" class="item-img"
+                            onerror="this.src='https://placehold.co/300x400/ffedd5/333?text=Mango'">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h3>Mango Green Tea</h3>
+                                <span class="item-price">$5.50</span>
+                            </div>
+                            <p class="item-desc">Sweet, ripe mango pulp shaken with premium tea. A summer favorite.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item-detailed reveal">
+                        <img src="assets/images/strawberry-tea.png" alt="Strawberry Black Tea" class="item-img"
+                            onerror="this.src='https://placehold.co/300x400/fee2e2/333?text=Strawberry'">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h3>Strawberry Black Tea</h3>
+                                <span class="item-price">$5.50</span>
+                            </div>
+                            <p class="item-desc">Real strawberry puree enhances the depth of our house black tea.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Fruit Smoothie -->
+        <section id="fruit-smoothie" class="menu-category accordion-item">
+            <button class="accordion-header">
+                <h2 class="category-title">Fruit Smoothie</h2>
+                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <div class="menu-items-grid">
+                    <p style="padding: 1rem; color: #666;">Selection coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Milk Foam -->
+        <section id="milk-foam" class="menu-category accordion-item">
+            <button class="accordion-header">
+                <h2 class="category-title">Milk Foam</h2>
+                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <div class="menu-items-grid">
+                    <p style="padding: 1rem; color: #666;">Selection coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Yakult -->
+        <section id="yakult" class="menu-category accordion-item">
+            <button class="accordion-header">
+                <h2 class="category-title">Yakult</h2>
+                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <div class="menu-items-grid">
+                    <p style="padding: 1rem; color: #666;">Selection coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Royal Lemon Tea -->
+        <section id="royal-lemon-tea" class="menu-category accordion-item">
+            <button class="accordion-header">
+                <h2 class="category-title">Royal Lemon Tea</h2>
+                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <div class="menu-items-grid">
+                    <p style="padding: 1rem; color: #666;">Selection coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Ice Cream Milk Tea -->
+        <section id="ice-cream-milk-tea" class="menu-category accordion-item">
+            <button class="accordion-header">
+                <h2 class="category-title">Ice Cream Milk Tea</h2>
+                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <div class="menu-items-grid">
+                    <p style="padding: 1rem; color: #666;">Selection coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Milkshakes -->
+        <section id="milkshakes" class="menu-category accordion-item">
+            <button class="accordion-header">
+                <h2 class="category-title">Milkshakes</h2>
+                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <div class="menu-items-grid">
+                    <p style="padding: 1rem; color: #666;">Selection coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. Macaroons -->
+        <section id="macaroons" class="menu-category accordion-item">
+            <button class="accordion-header">
+                <h2 class="category-title">Macaroons</h2>
+                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <div class="menu-items-grid">
+                    <p style="padding: 1rem; color: #666;">Selection coming soon...</p>
                 </div>
             </div>
         </section>

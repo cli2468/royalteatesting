@@ -204,4 +204,29 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
         observer.observe(el);
     });
+    // ============================
+    // MENU ACCORDION LOGIC
+    // ============================
+    const accordions = document.querySelectorAll('.accordion-header');
+
+    accordions.forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.closest('.accordion-item');
+            const content = item.querySelector('.accordion-content');
+            const isActive = item.classList.contains('active');
+
+            // Close all others
+            document.querySelectorAll('.accordion-item').forEach(other => {
+                other.classList.remove('active');
+                const otherContent = other.querySelector('.accordion-content');
+                if (otherContent) otherContent.style.maxHeight = null;
+            });
+
+            // Toggle clicked one
+            if (!isActive && content) {
+                item.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
 });
