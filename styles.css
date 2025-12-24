@@ -2446,24 +2446,39 @@ body.menu-page {
     flex-direction: column;
 }
 
-.item-header {
+/* Simple Menu List Styling */
+.menu-list-item {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
+    padding: 0.5rem 0;
     margin-bottom: 0.5rem;
 }
 
-.item-header h3 {
-    font-size: 1.25rem;
-    margin: 0;
-    font-weight: 700;
-    color: #1a1a1a;
+.menu-list-item::after {
+    content: "";
+    flex-grow: 1;
+    order: 2;
+    margin: 0 15px;
+    border-bottom: 3px dotted rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 7px;
 }
 
-.item-price {
+.item-name {
+    order: 1;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    line-height: 1.2;
+}
+
+.item-price-simple {
+    order: 3;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--color-primary);
-    font-size: 1.2rem;
+    line-height: 1.2;
 }
 
 .item-desc {
