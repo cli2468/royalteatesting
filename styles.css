@@ -2746,30 +2746,19 @@ body.menu-page {
     background: transparent;
     padding: 0.8rem 0.5rem;
     border-radius: 8px;
-    /* Slightly softer corners */
     font-size: 1.1rem;
     color: var(--color-text);
-    font-weight: 500;
-    /* Lighter weight */
+    font-weight: 700;
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    /* Simple outline */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     line-height: 1.1;
-    transition: all 0.2s ease;
     box-shadow: none;
     font-family: var(--font-heading);
-    /* Match menu items */
-}
-
-.poke-option:hover {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
-    background: rgba(230, 115, 91, 0.05);
-    transform: translateY(-2px);
+    cursor: default;
 }
 
 .poke-option small {
