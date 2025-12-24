@@ -2682,3 +2682,107 @@ body.menu-page {
     font-weight: 700;
     font-size: 1.1rem;
 }
+
+/* =========================================
+   POKE BUILDER STYLES (Minimalist)
+   ========================================= */
+.poke-builder {
+    padding: 1rem 0 2rem 0;
+}
+
+.poke-step {
+    margin-bottom: 2.5rem;
+    /* Removed card styling to blend with page */
+}
+
+.poke-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-heading);
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.step-number {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+    background: none;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.step-limit {
+    font-size: 1rem;
+    color: #888;
+    font-weight: 400;
+    margin-left: 0.5rem;
+    font-family: var(--font-body);
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+}
+
+@media (min-width: 600px) {
+    .option-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.poke-option {
+    background: transparent;
+    padding: 0.8rem 0.5rem;
+    border-radius: 8px;
+    /* Slightly softer corners */
+    font-size: 1.1rem;
+    color: var(--color-text);
+    font-weight: 500;
+    /* Lighter weight */
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    /* Simple outline */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.1;
+    transition: all 0.2s ease;
+    box-shadow: none;
+    font-family: var(--font-heading);
+    /* Match menu items */
+}
+
+.poke-option:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background: rgba(230, 115, 91, 0.05);
+    transform: translateY(-2px);
+}
+
+.poke-option small {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #999;
+    margin-top: 0.3rem;
+    font-family: var(--font-body);
+}
+
+.poke-option.highlight {
+    background: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
