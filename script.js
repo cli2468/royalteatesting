@@ -63,8 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add 'reveal' class to elements we want to animate if not present
     // Section Titles (Delayed)
+    // Section Titles (Delayed)
     document.querySelectorAll('.section-title').forEach(el => {
-        el.classList.add('reveal');
+        if (!el.classList.contains('no-reveal')) {
+            el.classList.add('reveal');
+        }
         titleObserver.observe(el);
     });
 

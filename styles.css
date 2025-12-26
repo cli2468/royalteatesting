@@ -1049,6 +1049,7 @@ a {
     margin-bottom: 0.1rem;
     color: #000;
     line-height: 1.2;
+    text-transform: capitalize;
 }
 
 .fav-info .price {
@@ -2376,21 +2377,22 @@ body.menu-page {
 
 .pickup-text {
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.3rem;
     /* Nice and big */
     color: #000;
     letter-spacing: -1px;
     line-height: 1;
+    padding-top: 3px;
 }
 
 /* Subtext */
 .menu-hero-subtext {
-    font-family: var(--font-display);
-    font-size: 1rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     color: #000;
     margin-top: 1rem;
     max-width: 1050px;
@@ -3106,4 +3108,55 @@ body.menu-page {
     }
 }
 
-```
+/* Our Favorites Header Animation */
+.favorites-header-animate {
+    position: relative;
+    padding: 0 0.2em;
+    display: inline-block;
+    color: transparent;
+    text-transform: uppercase;
+    font-size: 1.0em;
+    transform: rotate(-4deg);
+}
+
+.section-title.active .favorites-header-animate {
+    animation: textFadeIn 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
+}
+
+.favorites-header-animate::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-primary);
+    z-index: -1;
+    clip-path: inset(0 50% 0 50%);
+}
+
+.section-title.active .favorites-header-animate::before {
+    animation: revealCenter 0.6s ease-in-out forwards;
+}
+
+@keyframes revealCenter {
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes textFadeIn {
+    to {
+        color: white;
+    }
+}
+
+/* Adjust spacing for Our Favorites section */
+.menu-section {
+    padding-top: 0rem !important;
+    /* Reduced significantly per request "move up more" */
+    /* top margin between divider and favorites */
+}
+
+.menu-section .section-title {
+    margin-bottom: 5rem;
+    /* More space below */
+    margin-top: 0;
+}
