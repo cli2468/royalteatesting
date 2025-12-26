@@ -2310,6 +2310,7 @@ body.menu-page {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 25px;
+    overflow: hidden;
     width: 115px !important;
     flex-shrink: 0;
     height: 60px;
@@ -2353,9 +2354,34 @@ body.menu-page {
 }
 
 .service-card img {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: auto;
     object-fit: contain;
+    transform: scale(2.5);
+}
+
+/* Pickup Card Specifics */
+.pickup-card {
+    gap: 3px;
+    width: 115px !important;
+    /* Ensure override */
+}
+
+.service-card .pickup-icon {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2.5px;
+    transform: translateY(-2px);
+}
+
+.pickup-text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    /* Nice and big */
+    color: #000;
+    letter-spacing: -1px;
+    line-height: 1;
 }
 
 /* Subtext */
@@ -2874,7 +2900,11 @@ body.menu-page {
     overflow: hidden;
     position: relative;
     /* Gradient behind photos: Smooth Peach Radial */
+    /* Gradient behind photos: Smooth Pink Radial */
     background: radial-gradient(circle at 50% 70%, rgba(255, 182, 193, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    /* Fade out bottom to blend gradient */
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
 }
 
 .social-header {
@@ -2882,6 +2912,64 @@ body.menu-page {
     margin-bottom: 3rem;
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-platforms {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-platform-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-width: 140px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-platform-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-platform-card.instagram {
+    /* Instagram Gradient */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-platform-card.tiktok {
+    background: #000000;
+}
+
+.social-platform-card.facebook {
+    background: #1877F2;
+}
+
+@media (max-width: 768px) {
+    .social-platforms {
+        flex-direction: row;
+        /* Keep row on mobile but wrap if needed */
+        margin-top: 0.5rem;
+    }
+
+    .social-platform-card {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        min-width: auto;
+    }
 }
 
 .section-subtitle {
@@ -2909,7 +2997,7 @@ body.menu-page {
     gap: 2rem;
     padding: 1rem 0;
     align-items: center;
-    animation: scroll 60s linear infinite;
+    animation: scroll 40s linear infinite;
     width: max-content;
 }
 
