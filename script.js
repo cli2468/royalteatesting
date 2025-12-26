@@ -231,4 +231,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Circular Text Scroll
+    const circularValues = document.querySelector('.circular-text-scroll-wrapper');
+    if (circularValues) {
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY;
+            const rotation = scrollPos * -0.15; // Down = Negative = CCW
+            circularValues.style.transform = `rotate(${rotation}deg)`;
+        });
+    }
 });

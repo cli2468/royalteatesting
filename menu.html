@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Zilla+Slab:wght@400;600;700&family=Ma+Shan+Zheng&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=pickup_aligned">
+    <link rel="stylesheet" href="styles.css?v=menu_taro_fix_v1">
 </head>
 
 <body class="menu-page">
@@ -46,16 +46,18 @@
     <header class="menu-hero">
         <!-- Circular Title + Image -->
         <div class="hero-visual-center">
-            <svg class="circular-text-svg" viewBox="0 0 500 500">
-                <defs>
-                    <path id="circlePath" d="M 250, 250 m -230, 0 a 230,230 0 0,1 460,0 a 230,230 0 0,1 -460,0 " />
-                </defs>
-                <text class="circular-text-content">
-                    <textPath xlink:href="#circlePath" startOffset="50%" text-anchor="middle" fill="#C72B3E">
-                        THE ROYAL COLLECTION
-                    </textPath>
-                </text>
-            </svg>
+            <div class="circular-text-scroll-wrapper">
+                <svg class="circular-text-svg" viewBox="0 0 500 500">
+                    <defs>
+                        <path id="circlePath" d="M 250, 250 m -195, 0 a 195,195 0 0,1 390,0 a 195,195 0 0,1 -390,0 " />
+                    </defs>
+                    <text class="circular-text-content">
+                        <textPath xlink:href="#circlePath" startOffset="50%" text-anchor="middle" fill="#C72B3E">
+                            THE ROYAL COLLECTION
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
             <img src="https://placehold.co/400x400/FFBD69/white?text=Royal+Tea" alt="Royal Tea Lifestyle"
                 class="hero-center-img">
         </div>
@@ -104,15 +106,16 @@
             <div class="accordion-content">
                 <!-- Featured Row -->
                 <div class="featured-grid">
-                    <div class="featured-item">
-                        <img src="assets/images/milk_tea_lifestyle.png" alt="Royal Bubble Tea" class="featured-img">
-                        <div class="featured-title">Royal Bubble Tea</div>
+                    <div class="featured-item no-card">
+                        <img src="assets/images/brown_sugar_bubble_new.png" alt="Brown Sugar Bubble Tea"
+                            class="featured-img contain-fit">
+                        <div class="featured-title">Brown Sugar Bubble Tea</div>
                         <div class="featured-price">$5.25</div>
                     </div>
-                    <div class="featured-item">
-                        <img src="assets/images/milk_foam_lifestyle.png" alt="Brown Sugar Bubble Tea"
-                            class="featured-img">
-                        <div class="featured-title">Brown Sugar Bubble Tea</div>
+                    <div class="featured-item no-card">
+                        <img src="assets/images/taro_strawberry_new.png" alt="Taro Strawberry Tea"
+                            class="featured-img contain-fit">
+                        <div class="featured-title">Taro Strawberry Tea</div>
                         <div class="featured-price">$5.25</div>
                     </div>
                 </div>
@@ -120,10 +123,9 @@
                 <!-- Remaining Items List -->
                 <div class="menu-items-list">
                     <div class="menu-item-wrapper">
-                        <div class="menu-list-item"><span class="item-name">Taro Strawberry Tea</span><span
+                        <div class="menu-list-item"><span class="item-name">Royal Bubble Tea</span><span
                                 class="item-price-simple">$5.25</span></div>
-                        <div class="item-description">A blend of taro and strawberry flavors with milk tea and chewy
-                            tapioca pearls.</div>
+                        <div class="item-description">Our signature Royal Milk Tea with chewy tapioca pearls.</div>
                     </div>
                     <div class="menu-item-wrapper">
                         <div class="menu-list-item"><span class="item-name">Two Ladies Tea</span><span
@@ -280,8 +282,8 @@
             <div class="accordion-content">
                 <div class="featured-grid">
                     <div class="featured-item">
-                        <img src="assets/images/milk_foam_lifestyle.png" alt="Taro" class="featured-img">
-                        <div class="featured-title">Taro</div>
+                        <img src="assets/images/milk_foam_lifestyle.png" alt="Oreo" class="featured-img">
+                        <div class="featured-title">Oreo</div>
                         <div class="featured-price">$6.99</div>
                     </div>
                     <div class="featured-item">
@@ -310,10 +312,9 @@
                             whipped cream.</div>
                     </div>
                     <div class="menu-item-wrapper">
-                        <div class="menu-list-item"><span class="item-name">Oreo</span><span
+                        <div class="menu-list-item"><span class="item-name">Taro</span><span
                                 class="item-price-simple">$6.99</span></div>
-                        <div class="item-description">Cookies and cream base topped with Oreo cookies, Pocky, sprinkles,
-                            and whipped cream.</div>
+                        <div class="item-description">Sweet taro base topped with whipped cream and sprinkles.</div>
                     </div>
                     <div class="menu-item-wrapper">
                         <div class="menu-list-item"><span class="item-name">Strawberry</span><span
@@ -349,14 +350,15 @@
             <div class="accordion-content">
                 <div class="featured-grid">
                     <div class="featured-item">
-                        <img src="assets/images/milk_tea_lifestyle.png" alt="Oreo Bubble Waffle" class="featured-img">
-                        <div class="featured-title">Oreo Bubble Waffle</div>
-                        <div class="featured-price">$7.95</div>
-                    </div>
-                    <div class="featured-item">
                         <img src="assets/images/milk_tea_lifestyle.png" alt="Chocolate Bubble Waffle"
                             class="featured-img">
                         <div class="featured-title">Chocolate Bubble Waffle</div>
+                        <div class="featured-price">$7.95</div>
+                    </div>
+                    <div class="featured-item">
+                        <img src="assets/images/milk_tea_lifestyle.png" alt="Strawberry Bubble Waffle"
+                            class="featured-img">
+                        <div class="featured-title">Strawberry Bubble Waffle</div>
                         <div class="featured-price">$7.95</div>
                     </div>
                 </div>
@@ -368,10 +370,10 @@
                             and whipped cream.</div>
                     </div>
                     <div class="menu-item-wrapper">
-                        <div class="menu-list-item"><span class="item-name">Strawberry Bubble Waffle</span><span
+                        <div class="menu-list-item"><span class="item-name">Oreo Bubble Waffle</span><span
                                 class="item-price-simple">$7.95</span></div>
-                        <div class="item-description">Topped with strawberry ice cream, rainbow sprinkles, strawberry
-                            syrup, and whipped cream.</div>
+                        <div class="item-description">Topped with vanilla ice cream, Oreo cookies, chocolate syrup,
+                            and whipped cream.</div>
                     </div>
                     <div class="menu-item-wrapper">
                         <div class="menu-list-item"><span class="item-name">Rainbow Bubble Waffle</span><span
@@ -401,9 +403,9 @@
                         <div class="featured-price">$6.99</div>
                     </div>
                     <div class="featured-item">
-                        <img src="assets/images/fruit_tea_lifestyle.png" alt="Royal Fruit Green Tea"
+                        <img src="assets/images/fruit_tea_lifestyle.png" alt="Honey Lemon Green Tea"
                             class="featured-img">
-                        <div class="featured-title">Royal Fruit Green Tea</div>
+                        <div class="featured-title">Honey Lemon Green Tea</div>
                         <div class="featured-price">$6.99</div>
                     </div>
                 </div>
@@ -447,9 +449,9 @@
                         </div>
                     </div>
                     <div class="menu-item-wrapper">
-                        <div class="menu-list-item"><span class="item-name">Honey Lemon Green Tea</span><span
+                        <div class="menu-list-item"><span class="item-name">Royal Fruit Green Tea</span><span
                                 class="item-price-simple">$6.50</span></div>
-                        <div class="item-description">House blend green tea infused with honey and fresh lemon slices.
+                        <div class="item-description">House blend green tea with fresh mixed fruits and jams.
                         </div>
                     </div>
                 </div>
@@ -468,14 +470,14 @@
             <div class="accordion-content">
                 <div class="featured-grid">
                     <div class="featured-item">
-                        <img src="assets/images/fruit_tea_lifestyle.png" alt="Dragonfruit Smoothie"
-                            class="featured-img">
-                        <div class="featured-title">Dragonfruit Smoothie</div>
+                        <img src="assets/images/fruit_tea_lifestyle.png" alt="Strawberry Smoothie" class="featured-img">
+                        <div class="featured-title">Strawberry Smoothie</div>
                         <div class="featured-price">$6.50</div>
                     </div>
                     <div class="featured-item">
-                        <img src="assets/images/fruit_tea_lifestyle.png" alt="Taro Smoothie" class="featured-img">
-                        <div class="featured-title">Taro Smoothie</div>
+                        <img src="assets/images/fruit_tea_lifestyle.png" alt="Piña Colada Smoothie"
+                            class="featured-img">
+                        <div class="featured-title">Piña Colada Smoothie</div>
                         <div class="featured-price">$6.50</div>
                     </div>
                 </div>
@@ -501,9 +503,9 @@
                         <div class="item-description">Premium matcha green tea blended with milk and ice.</div>
                     </div>
                     <div class="menu-item-wrapper">
-                        <div class="menu-list-item"><span class="item-name">Strawberry Smoothie</span><span
+                        <div class="menu-list-item"><span class="item-name">Dragonfruit Smoothie</span><span
                                 class="item-price-simple">$6.50</span></div>
-                        <div class="item-description">Fresh strawberry puree blended with ice and milk.</div>
+                        <div class="item-description">Fresh dragonfruit puree blended with ice and milk.</div>
                     </div>
                     <div class="menu-item-wrapper">
                         <div class="menu-list-item"><span class="item-name">Pineapple Smoothie</span><span
@@ -527,19 +529,16 @@
                         <div class="item-description">A creamy blend of fresh avocado and sweet mango.</div>
                     </div>
                     <div class="menu-item-wrapper">
-                        <div class="menu-list-item"><span class="item-name">Piña Colada Smoothie</span><span
+                        <div class="menu-list-item"><span class="item-name">Taro Smoothie</span><span
                                 class="item-price-simple">$6.50</span></div>
-                        <div class="item-description">Pineapple and coconut blend, refreshing and tropical.</div>
+                        <div class="item-description">Creamy taro blend, sweet and refreshing.</div>
                     </div>
                     <div class="menu-item-wrapper">
                         <div class="menu-list-item"><span class="item-name">Strawberry Banana Smoothie</span><span
                                 class="item-price-simple">$6.50</span></div>
                         <div class="item-description">Classic blend of fresh strawberries and banana.</div>
                     </div>
-                    <div class="menu-list-item"><span class="item-name">Piña Colada Smoothie</span><span
-                            class="item-price-simple">$6.50</span></div>
-                    <div class="menu-list-item"><span class="item-name">Strawberry Banana Smoothie</span><span
-                            class="item-price-simple">$6.50</span></div>
+
                 </div>
             </div>
         </section>
@@ -615,8 +614,8 @@
             <div class="accordion-content">
                 <div class="featured-grid">
                     <div class="featured-item">
-                        <img src="assets/images/fruit_tea_lifestyle.png" alt="Strawberry Yakult" class="featured-img">
-                        <div class="featured-title">Strawberry Yakult</div>
+                        <img src="assets/images/fruit_tea_lifestyle.png" alt="Peach Yakult" class="featured-img">
+                        <div class="featured-title">Peach Yakult</div>
                         <div class="featured-price">$6.25</div>
                     </div>
                     <div class="featured-item">
@@ -632,9 +631,9 @@
                         <div class="item-description">Probiotic yogurt drink mixed with sweet pineapple flavor.</div>
                     </div>
                     <div class="menu-item-wrapper">
-                        <div class="menu-list-item"><span class="item-name">Peach Yakult</span><span
+                        <div class="menu-list-item"><span class="item-name">Strawberry Yakult</span><span
                                 class="item-price-simple">$6.25</span></div>
-                        <div class="item-description">Probiotic yogurt drink mixed with juice peach flavor.</div>
+                        <div class="item-description">Probiotic yogurt drink mixed with fresh strawberry flavor.</div>
                     </div>
                     <div class="menu-item-wrapper">
                         <div class="menu-list-item"><span class="item-name">Passion Fruit & Lime Yakult</span><span
@@ -658,9 +657,9 @@
             <div class="accordion-content">
                 <div class="featured-grid">
                     <div class="featured-item">
-                        <img src="assets/images/fruit_tea_lifestyle.png" alt="Passion Fruit Lemon Tea"
+                        <img src="assets/images/fruit_tea_lifestyle.png" alt="Dragon Fruit Mango Lemon Tea"
                             class="featured-img">
-                        <div class="featured-title">Passion Fruit Lemon Tea</div>
+                        <div class="featured-title">Dragon Fruit Mango Lemon Tea</div>
                         <div class="featured-price">$7.25</div>
                     </div>
                     <div class="featured-item">
@@ -678,9 +677,9 @@
                         </div>
                     </div>
                     <div class="menu-item-wrapper">
-                        <div class="menu-list-item"><span class="item-name">Dragon Fruit Mango lemon Tea</span><span
+                        <div class="menu-list-item"><span class="item-name">Passion Fruit Lemon Tea</span><span
                                 class="item-price-simple">$7.25</span></div>
-                        <div class="item-description">Fresh lemon tea with dragon fruit and mango flavors.</div>
+                        <div class="item-description">Fresh lemon tea with passion fruit flavors.</div>
                     </div>
                     <div class="menu-item-wrapper">
                         <div class="menu-list-item"><span class="item-name">Strawberry Dragon Fruit lemon
@@ -766,8 +765,8 @@
             <div class="accordion-content">
                 <div class="featured-grid">
                     <div class="featured-item">
-                        <img src="assets/images/milk_foam_lifestyle.png" alt="Red Velvet Macaroon" class="featured-img">
-                        <div class="featured-title">Red Velvet Macaroon</div>
+                        <img src="assets/images/milk_foam_lifestyle.png" alt="Mango Macaroon" class="featured-img">
+                        <div class="featured-title">Mango Macaroon</div>
                         <div class="featured-price">$2.75</div>
                     </div>
                     <div class="featured-item">
@@ -794,7 +793,7 @@
                             class="item-price-simple">$2.75</span></div>
                     <div class="menu-list-item"><span class="item-name">Nutella Macaroon</span><span
                             class="item-price-simple">$2.75</span></div>
-                    <div class="menu-list-item"><span class="item-name">Mango Macaroon</span><span
+                    <div class="menu-list-item"><span class="item-name">Red Velvet Macaroon</span><span
                             class="item-price-simple">$2.75</span></div>
                 </div>
             </div>
