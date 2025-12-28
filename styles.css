@@ -141,13 +141,13 @@ a {
 .featured-item.no-card .featured-img.scale-fix {
     transform: scale(2.4) translateY(-5px);
     transform-origin: center center;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.9));
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.6));
 }
 
 .featured-item.no-card .featured-img.matcha-scale {
     transform: scale(2.9) translateY(-05px);
     transform-origin: center center;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.9));
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.6));
 }
 
 
@@ -2743,11 +2743,13 @@ body.menu-page {
     box-shadow: none;
     border-radius: 0;
     height: 350px;
-    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.1));
+    margin-bottom: -50px;
 }
 
 .favorites-grid .featured-item.no-card .featured-img {
     height: 180px;
+    margin-bottom: -5px;
 }
 
 .featured-title {
@@ -3222,7 +3224,7 @@ body.menu-page {
 
 /* Adjust spacing for Our Favorites section */
 .menu-section {
-    padding-top: 0rem !important;
+    padding-top: 4rem;
     /* Reduced significantly per request "move up more" */
     /* top margin between divider and favorites */
 }
@@ -3250,4 +3252,274 @@ body.menu-page {
 .circular-text-scroll-wrapper svg {
     width: 100%;
     height: 100%;
+}
+
+/* Social Highlights Section */
+.social-highlights {
+    padding: 6rem 0;
+    position: relative;
+    background: radial-gradient(circle at center 55%, rgba(199, 43, 62, 0.5) 0%, var(--color-bg) 80%);
+    /* Stronger central glow */
+    /* Subtle central glow */
+    /* Peach to Pink Gradient */
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    max-width: 1000px;
+    /* Tighter width */
+    height: 550px;
+    /* Fixed height for bento look */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-card {
+    position: relative;
+    display: block;
+    aspect-ratio: auto;
+    /* Allow stretch */
+    height: 100%;
+    /* Square post */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s;
+}
+
+.social-card:nth-child(1) {
+    grid-row: span 2;
+}
+
+.social-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.social-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.social-card:hover .social-img {
+    transform: scale(1.05);
+}
+
+.social-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(199, 43, 62, 0.9) 0%, rgba(199, 43, 62, 0.4) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.social-metric {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    /* Tighter gap like TikTok */
+    color: #fff;
+    font-weight: 600;
+    /* Semi-bold */
+    font-size: 1.25rem;
+    /* Matched to icon size */
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    /* Clean sans */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.8);
+    /* Stronger drop shadow */
+}
+
+.social-metric svg {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+/* New Positioning Class */
+.social-bottom-left {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.social-media-type {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 5;
+}
+
+.promo-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 5;
+    box-shadow: 0 4px 10px rgba(199, 43, 62, 0.4);
+}
+
+.social-cta-container {
+    text-align: center;
+    margin-top: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-cta-container p {
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.social-buttons-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    background: #fff;
+    color: var(--color-text);
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: none;
+    /* Remove border causing gradient bleed */
+    overflow: hidden;
+    /* Clip any overflow */
+}
+
+.btn-social:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.btn-social svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+}
+
+/* Branded Colors */
+.btn-social:nth-child(1) {
+    /* TikTok */
+    background: #000;
+    color: #fff;
+}
+
+.btn-social:nth-child(2) {
+    /* Instagram */
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #fff;
+}
+
+.btn-social:nth-child(3) {
+    /* Facebook */
+    background: #1877F2;
+    color: #fff;
+}
+
+.btn-social:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .social-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.5fr 1fr;
+        height: 500px;
+        /* Force height to fit screen */
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+
+    .social-card:nth-child(1) {
+        grid-column: span 2;
+        /* Full width top */
+        grid-row: span 1;
+        /* Only 1 row high */
+    }
+}
+
+/* --- Our Story Collage --- */
+.about-collage {
+    display: flex;
+    justify-content: center;
+    /* Center items */
+    gap: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.collage-item {
+    flex: 1;
+    min-height: 325px;
+    min-width: 250px;
+    max-width: 45%;
+    /* Limit width to create gap */
+    margin: 0rem -3.5rem;
+    /* Add horizontal spacing */
+    border-radius: 20px;
+    overflow: hidden;
+    border: 4px solid #fff;
+    /* White border */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.collage-item:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 868px) {
+    .about-collage {
+        flex-direction: column;
+    }
+
+    .collage-item {
+        height: 250px;
+    }
 }

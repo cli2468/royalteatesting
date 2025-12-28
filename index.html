@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Zilla+Slab:wght@400;600;700&family=Ma+Shan+Zheng&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=matcha_scale_2.9_v1">
+    <link rel="stylesheet" href="styles.css?v=tea_shadow_v1">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <style>
         /* INJECTED CROWN FIX - STATIC FINAL */
@@ -104,29 +104,11 @@
         </div>
     </header>
 
-    <!-- Infinite Scrolling Banner -->
-    <div class="scrolling-banner-container">
+
+
+    <!-- Restored Rolling Banner -->
+    <div class="scrolling-banner-container" style="margin: 2rem 0;">
         <div class="scrolling-banner">
-            <div class="banner-content"><span>HAND ROLLED</span><svg class="boba-icon" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" fill="#000" />
-                    <circle cx="65" cy="35" r="10" fill="white" opacity="0.8" />
-                </svg><span>DICED FRESH</span><svg class="boba-icon" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" fill="#000" />
-                    <circle cx="65" cy="35" r="10" fill="white" opacity="0.8" />
-                </svg><span>HOUSE BREWED</span><svg class="boba-icon" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" fill="#000" />
-                    <circle cx="65" cy="35" r="10" fill="white" opacity="0.8" />
-                </svg></div>
-            <div class="banner-content"><span>HAND ROLLED</span><svg class="boba-icon" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" fill="#000" />
-                    <circle cx="65" cy="35" r="10" fill="white" opacity="0.8" />
-                </svg><span>DICED FRESH</span><svg class="boba-icon" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" fill="#000" />
-                    <circle cx="65" cy="35" r="10" fill="white" opacity="0.8" />
-                </svg><span>HOUSE BREWED</span><svg class="boba-icon" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" fill="#000" />
-                    <circle cx="65" cy="35" r="10" fill="white" opacity="0.8" />
-                </svg></div>
             <div class="banner-content"><span>HAND ROLLED</span><svg class="boba-icon" viewBox="0 0 100 100">
                     <circle cx="50" cy="50" r="45" fill="#000" />
                     <circle cx="65" cy="35" r="10" fill="white" opacity="0.8" />
@@ -201,8 +183,12 @@
 
                 <div class="about-collage">
                     <div class="collage-item item-1">
+                        <img src="assets/images/story_claw_machine.jpg" alt="Claw Machine"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                     </div>
                     <div class="collage-item item-2">
+                        <img src="assets/images/story_counter.jpg" alt="Royal Tea Counter"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                     </div>
                 </div>
                 <div class="about-text">
@@ -223,12 +209,11 @@
                         Favorites</span></span></h2>
             <div class="favorites-grid">
                 <!-- Row 1: Ice Cream -->
-                <div class="fav-card">
-                    <div class="fav-visual visual-oreo"></div>
-                    <div class="fav-info">
-                        <h4>Oreo Hand Roll</h4>
-                        <p class="price">$6.99</p>
-                    </div>
+                <div class="featured-item no-card">
+                    <img src="assets/images/oreo_ice_cream.png" alt="Oreo Hand Roll" class="featured-img contain-fit"
+                        style="transform: scale(1.75); margin-top: -2rem; margin-bottom: 1rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));">
+                    <div class="featured-title" style="margin-bottom: .3rem;">Oreo Hand Roll</div>
+                    <div class="featured-price" style="margin-bottom: 2rem;">$6.99</div>
                 </div>
                 <div class="fav-card">
                     <div class="fav-visual visual-banana"></div>
@@ -247,14 +232,16 @@
 
                 <!-- Row 2: Tea -->
                 <div class="featured-item no-card">
-                    <img src="assets/images/matcha_tea_v1.png" alt="Matcha Tea"
-                        class="featured-img contain-fit matcha-scale">
-                    <div class="featured-title">Matcha Tea</div>
+                    <img src="assets/images/matcha_tea_v1.png" alt="Matcha Milk Tea"
+                        class="featured-img contain-fit matcha-scale"
+                        style="filter: drop-shadow(0 4px 8px rgba(0,0,0,.3));">
+                    <div class="featured-title">Matcha Milk Tea</div>
                     <div class="featured-price">$5.25</div>
                 </div>
                 <div class="featured-item no-card">
                     <img src="assets/images/brown_sugar_bubble_v3.png" alt="Brown Sugar Bubble Tea"
-                        class="featured-img contain-fit scale-fix">
+                        class="featured-img contain-fit scale-fix"
+                        style="filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
                     <div class="featured-title">Brown Sugar Bubble Tea</div>
                     <div class="featured-price">$5.25</div>
                 </div>
@@ -264,177 +251,130 @@
                     <div class="featured-title">Taro Strawberry Tea</div>
                     <div class="featured-price">$5.25</div>
                 </div>
-                <div class="fav-card">
-                    <div class="fav-visual visual-rose"></div>
-                    <div class="fav-info">
-                        <h4>Taro Strawberry</h4>
-                        <p class="price">$5.25</p>
-                    </div>
-                </div>
-
-                <!-- Row 3: More Tea/Poke -->
-                <div class="fav-card">
-                    <div class="fav-visual visual-poke"></div>
-                    <div class="fav-info">
-                        <h4>Pok&eacute; Bowl</h4>
-                        <p class="price">$14.50</p>
-                    </div>
-                </div>
-                <div class="fav-card">
-                    <div class="fav-visual visual-matcha"></div>
-                    <div class="fav-info">
-                        <h4>Passionfruit And Lime Tea</h4>
-                        <p class="price">$5.25</p>
-                    </div>
-                </div>
-                <div class="fav-card">
-                    <div class="fav-visual visual-oreo"></div>
-                    <div class="fav-info">
-                        <h4>Oreo Bubble Waffle</h4>
-                        <p class="price">$8.99</p>
-                    </div>
-                </div>
             </div>
 
             <div class="menu-footer animate-on-scroll">
                 <a href="menu.html" class="btn-full-menu">Click for Full Menu</a>
             </div>
+            <hr class="section-divider" style="margin-top: 8rem; margin-bottom: -6rem;">
 
         </div>
     </section>
 
-    <!-- Social Media Section -->
-    <section id="community" class="social-section">
+
+    <section class="social-highlights">
         <div class="container">
-            <div class="social-header">
-                <h2 class="section-title">Follow Us!</h2>
-
-                <div class="social-platforms">
-                    <a href="https://www.instagram.com/royalteaindiana/" target="_blank"
-                        class="social-platform-card instagram">
-                        <span>Instagram</span>
-                    </a>
-                    <a href="https://www.tiktok.com/@grandroyaltea" target="_blank" class="social-platform-card tiktok">
-                        <span>TikTok</span>
-                    </a>
-                    <a href="https://www.facebook.com/royalteaindiana/" target="_blank"
-                        class="social-platform-card facebook">
-                        <span>Facebook</span>
-                    </a>
-                </div>
-            </div>
+            <h2 class="section-title">Stay in the Loop</h2>
+            <p
+                style="text-align: center; font-size: 1.2rem; color: var(--color-text); margin-bottom: 2rem; line-height: 1.5; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Follow us for behind-the-scenes, secret menu items, and monthly giveaways!</p>
         </div>
-        <div class="social-marquee">
-            <div class="social-track">
-                <!-- Group 1: Standard (Tall + Stack) -->
-                <div class="collage-group">
-                    <div class="social-card tall">
-                        <img src="https://placehold.co/300x400/FFAB73/white?text=Top+Fan" alt="Social Tall">
-                    </div>
-                    <div class="social-stack">
-                        <div class="social-card small">
-                            <img src="https://placehold.co/300x190/e0e0e0/555?text=Boba+Lover" alt="Social Small">
-                        </div>
-                        <div class="social-card small">
-                            <img src="https://placehold.co/300x190/C72B3E/white?text=Yummy" alt="Social Small">
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Group 2: Reverse + Uneven (Stack + Tall) -->
-                <div class="collage-group reverse">
-                    <div class="social-card tall">
-                        <img src="https://placehold.co/300x400/fad0c4/555?text=Selfie+King" alt="Social Tall">
-                    </div>
-                    <div class="social-stack">
-                        <div class="social-card small grow-2"> <!-- Taller Top -->
-                            <img src="https://placehold.co/300x350/fff8f0/333?text=Waffle+Zoom" alt="Social Mixed">
-                        </div>
-                        <div class="social-card small grow-1"> <!-- Shorter Bottom -->
-                            <img src="https://placehold.co/300x150/FFD194/333?text=Squad" alt="Social Mixed">
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Group 3: Feature Wide -->
-                <div class="collage-group feature-wide">
-                    <div class="social-card">
-                        <img src="https://placehold.co/500x400/e0e0e0/555?text=Community+Event" alt="Social Wide">
-                    </div>
-                </div>
 
-                <!-- Group 4: Standard Stack + Tall -->
-                <div class="collage-group reverse">
-                    <div class="social-card tall">
-                        <img src="https://placehold.co/300x400/fad0c4/555?text=Pup+Cup" alt="Social Tall">
+        <div class="container">
+            <div class="social-grid">
+                <!-- Card 1: Viral Video -->
+                <!-- Card 1: Viral Video (Cinematic) -->
+                <!-- Card 1: Viral Video (Cinematic) -->
+                <!-- Card 1: Viral Video (Cinematic) -->
+                <a href="https://www.tiktok.com/@grandroyaltea/video/7497747617217072426" target="_blank"
+                    class="social-card" style="overflow: hidden;">
+                    <div class="social-media-type" style="z-index: 2;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
                     </div>
-                    <div class="social-stack">
-                        <div class="social-card small">
-                            <img src="https://placehold.co/300x190/fff8f0/333?text=Toppings" alt="Social Small">
-                        </div>
-                        <div class="social-card small">
-                            <img src="https://placehold.co/300x190/FFD194/333?text=Interior" alt="Social Small">
+                    <video autoplay loop muted playsinline class="social-img"
+                        style="object-fit: cover; width: 100%; height: 100%;">
+                        <source src="assets/videos/tiktok_grandroyaltea_7497747617217072426.mp4" type="video/mp4">
+                    </video>
+
+                    <!-- Bottom Left Overlay -->
+                    <div class="social-bottom-left">
+                        <div class="social-metric">
+                            <!-- Play Arrow Icon (Outlined, Bigger) -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            <span>413.6K</span>
                         </div>
                     </div>
-                </div>
+                </a>
+
+                <!-- Card 2: New Video (Bottom Left Mobile) -->
+                <a href="https://www.tiktok.com/@grandroyaltea/video/7497428111294811423" target="_blank"
+                    class="social-card" style="overflow: hidden;">
+                    <div class="social-media-type" style="z-index: 2;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </div>
+                    <video autoplay loop muted playsinline class="social-img"
+                        style="object-fit: cover; width: 100%; height: 100%;">
+                        <source src="assets/videos/tiktok_grandroyaltea_7497428111294811423.mp4" type="video/mp4">
+                    </video>
+                    <div class="social-bottom-left">
+                        <div class="social-metric">
+                            <!-- Heart Icon (Outlined, Bigger) -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                            <span>2.8K</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3: Giveaway -->
+                <a href="https://www.facebook.com/photo/?fbid=859239953530617&set=pb.100083338597545.-2207520000"
+                    target="_blank" class="social-card">
+                    <img src="assets/images/christmas_giveaway.jpg" alt="Christmas Giveaway" class="social-img"
+                        style="object-position: center bottom;">
+                    <!-- Top Right Giveaway Label -->
+                    <div class="promo-badge"
+                        style="position: absolute; top: 15px; right: 15px; left: auto; bottom: auto;">GIVEAWAY</div>
+                </a>
             </div>
-            <!-- Duplicate Track for Seamless Loop -->
-            <div class="social-track">
-                <!-- Group 1: Standard (Tall + Stack) -->
-                <div class="collage-group">
-                    <div class="social-card tall">
-                        <img src="https://placehold.co/300x400/FFAB73/white?text=Top+Fan" alt="Social Tall">
-                    </div>
-                    <div class="social-stack">
-                        <div class="social-card small">
-                            <img src="https://placehold.co/300x190/e0e0e0/555?text=Boba+Lover" alt="Social Small">
-                        </div>
-                        <div class="social-card small">
-                            <img src="https://placehold.co/300x190/C72B3E/white?text=Yummy" alt="Social Small">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Group 2: Reverse + Uneven (Stack + Tall) -->
-                <div class="collage-group reverse">
-                    <div class="social-card tall">
-                        <img src="https://placehold.co/300x400/fad0c4/555?text=Selfie+King" alt="Social Tall">
-                    </div>
-                    <div class="social-stack">
-                        <div class="social-card small grow-2"> <!-- Taller Top -->
-                            <img src="https://placehold.co/300x350/fff8f0/333?text=Waffle+Zoom" alt="Social Mixed">
-                        </div>
-                        <div class="social-card small grow-1"> <!-- Shorter Bottom -->
-                            <img src="https://placehold.co/300x150/FFD194/333?text=Squad" alt="Social Mixed">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Group 3: Feature Wide -->
-                <div class="collage-group feature-wide">
-                    <div class="social-card">
-                        <img src="https://placehold.co/500x400/e0e0e0/555?text=Community+Event" alt="Social Wide">
-                    </div>
-                </div>
-
-                <!-- Group 4: Standard Stack + Tall -->
-                <div class="collage-group reverse">
-                    <div class="social-card tall">
-                        <img src="https://placehold.co/300x400/fad0c4/555?text=Pup+Cup" alt="Social Tall">
-                    </div>
-                    <div class="social-stack">
-                        <div class="social-card small">
-                            <img src="https://placehold.co/300x190/fff8f0/333?text=Toppings" alt="Social Small">
-                        </div>
-                        <div class="social-card small">
-                            <img src="https://placehold.co/300x190/FFD194/333?text=Interior" alt="Social Small">
-                        </div>
-                    </div>
+            <!-- Moved Buttons Below Grid -->
+            <div class="social-cta-container" style="margin-top: 3rem; margin-bottom: 0;">
+                <div class="social-buttons-row">
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@grandroyaltea" target="_blank" class="btn-social">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z">
+                            </path>
+                        </svg>
+                        TikTok
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/royalteaindiana/" target="_blank" class="btn-social">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        Instagram
+                    </a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/royalteaindiana" target="_blank" class="btn-social">
+                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" fill="none">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                        Facebook
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-
 
 
     <section id="location" class="location-section">
