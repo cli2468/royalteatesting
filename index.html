@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Zilla+Slab:wght@400;600;700&family=Ma+Shan+Zheng&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=tea_shadow_v1">
+    <link rel="stylesheet" href="styles.css?v=desktop_divider_v2">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <style>
         /* INJECTED CROWN FIX - STATIC FINAL */
@@ -42,8 +42,10 @@
             Royal Tea<span class="chinese-logo">皇茶</span>
         </a>
         <div class="nav-right">
+            <a href="#about" class="desktop-nav-link">Our Story</a>
+            <a href="menu.html" class="desktop-nav-link">Menu</a>
             <a href="#community">Social Media</a>
-            <a href="#location">Locations</a>
+            <a href="#location">Location</a>
             <a href="https://orderonlinemenu.com/RoyalTeaHighlandIn" class="btn-nav-cta">Order Now</a>
 
             <!-- DoorDash -->
@@ -91,6 +93,8 @@
                     </span>
                 </div>
             </h1>
+            <a href="https://orderonlinemenu.com/RoyalTeaHighlandIn" target="_blank"
+                class="btn-primary hero-btn hero-text-btn">ORDER NOW</a>
         </div>
         <div class="hero-visual-group">
             <img src="assets/images/hero_side_left.png" class="bowl-side bowl-left" alt="Poke Bowl">
@@ -208,36 +212,7 @@
             <h2 class="section-title no-reveal"><span class="favorites-header-animate"><span class="fav-text">Our
                         Favorites</span></span></h2>
             <div class="favorites-grid">
-                <!-- Row 1: Ice Cream -->
-                <div class="featured-item no-card">
-                    <img src="assets/images/oreo_ice_cream.png" alt="Oreo Hand Roll" class="featured-img contain-fit"
-                        style="transform: scale(1.75); margin-top: -2rem; margin-bottom: 1rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));">
-                    <div class="featured-title" style="margin-bottom: .3rem;">Oreo Hand Roll</div>
-                    <div class="featured-price" style="margin-bottom: 2rem;">$6.99</div>
-                </div>
-                <div class="fav-card">
-                    <div class="fav-visual visual-banana"></div>
-                    <div class="fav-info">
-                        <h4>Perfect Pair</h4>
-                        <p class="price">$6.99</p>
-                    </div>
-                </div>
-                <div class="fav-card">
-                    <div class="fav-visual visual-berry"></div>
-                    <div class="fav-info">
-                        <h4>Summer Party</h4>
-                        <p class="price">$6.99</p>
-                    </div>
-                </div>
-
-                <!-- Row 2: Tea -->
-                <div class="featured-item no-card">
-                    <img src="assets/images/matcha_tea_v1.png" alt="Matcha Milk Tea"
-                        class="featured-img contain-fit matcha-scale"
-                        style="filter: drop-shadow(0 4px 8px rgba(0,0,0,.3));">
-                    <div class="featured-title">Matcha Milk Tea</div>
-                    <div class="featured-price">$5.25</div>
-                </div>
+                <!-- Row 1 -->
                 <div class="featured-item no-card">
                     <img src="assets/images/brown_sugar_bubble_v3.png" alt="Brown Sugar Bubble Tea"
                         class="featured-img contain-fit scale-fix"
@@ -246,10 +221,36 @@
                     <div class="featured-price">$5.25</div>
                 </div>
                 <div class="featured-item no-card">
-                    <img src="assets/images/taro_strawberry_new.png" alt="Taro Strawberry Tea"
-                        class="featured-img contain-fit">
+                    <img src="assets/images/oreo_ice_cream.png" alt="Oreo Hand Roll" class="featured-img contain-fit"
+                        style="filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));">
+                    <div class="featured-title">Oreo Hand Roll</div>
+                    <div class="featured-price">$6.99</div>
+                </div>
+                <div class="featured-item no-card">
+                    <img src="assets/images/royal_fruit_tea.png" alt="Royal Fruit Black Tea"
+                        class="featured-img contain-fit" style="filter: drop-shadow(0 4px 8px rgba(0,0,0,.3));">
+                    <div class="featured-title">Royal Fruit Black Tea</div>
+                    <div class="featured-price">$6.99</div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="featured-item no-card">
+                    <img src="assets/images/taro_strawberry_v2.png" alt="Taro Strawberry Tea"
+                        class="featured-img contain-fit" style="filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
                     <div class="featured-title">Taro Strawberry Tea</div>
                     <div class="featured-price">$5.25</div>
+                </div>
+                <div class="featured-item no-card">
+                    <img src="assets/images/chocolate_icecream_milktea.png" alt="Chocolate Ice Cream Milk Tea"
+                        class="featured-img contain-fit" style="filter: drop-shadow(0 4px 8px rgba(0,0,0,.3));">
+                    <div class="featured-title">Chocolate Ice Cream Milk Tea</div>
+                    <div class="featured-price">$7.50</div>
+                </div>
+                <div class="featured-item no-card">
+                    <img src="assets/images/chocolate_bubble_waffle.png" alt="Chocolate Bubble Waffle"
+                        class="featured-img contain-fit" style="filter: drop-shadow(0 4px 8px rgba(0,0,0,.3));">
+                    <div class="featured-title">Chocolate Bubble Waffle</div>
+                    <div class="featured-price">$7.95</div>
                 </div>
             </div>
 
@@ -262,7 +263,7 @@
     </section>
 
 
-    <section class="social-highlights">
+    <section id="community" class="social-highlights">
         <div class="container">
             <h2 class="section-title">Stay in the Loop</h2>
             <p
