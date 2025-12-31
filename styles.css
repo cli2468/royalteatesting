@@ -3030,7 +3030,7 @@ body.menu-page {
     transform: scale(3.5) translateY(0);
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
     margin-bottom: 2rem;
-    margin-top: 0;
+    margin-top: 1rem;
 }
 
 /* 2. Oreo Hand Roll (Row 1, Center) */
@@ -3039,7 +3039,7 @@ body.menu-page {
     transform: scale(2) translateY(0);
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1));
     margin-bottom: 2rem;
-    margin-top: 0;
+    margin-top: 1rem;
 }
 
 /* 3. Royal Fruit Black Tea (Row 1, Right) */
@@ -3048,7 +3048,7 @@ body.menu-page {
     transform: scale(2.6) translateY(0) translateX(3px);
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3));
     margin-bottom: 2rem;
-    margin-top: 0rem;
+    margin-top: 1rem;
 }
 
 /* 4. Taro Strawberry Tea (Row 2, Left) */
@@ -3076,6 +3076,37 @@ body.menu-page {
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3)) contrast(0.9);
     margin-bottom: 6rem;
     margin-top: -3rem;
+}
+
+/* --- OUR FAVORITES - Price Margin Control (Mobile) --- */
+/* 1. Brown Sugar Bubble Tea */
+.favorites-grid .featured-item:nth-child(1) .featured-price {
+    margin-bottom: 3rem;
+}
+
+/* 2. Oreo Hand Roll */
+.favorites-grid .featured-item:nth-child(2) .featured-price {
+    margin-bottom: 0;
+}
+
+/* 3. Royal Fruit Black Tea */
+.favorites-grid .featured-item:nth-child(3) .featured-price {
+    margin-bottom: 0;
+}
+
+/* 4. Taro Strawberry Tea */
+.favorites-grid .featured-item:nth-child(4) .featured-price {
+    margin-bottom: 0rem;
+}
+
+/* 5. Chocolate Ice Cream Milk Tea */
+.favorites-grid .featured-item:nth-child(5) .featured-price {
+    margin-bottom: 0;
+}
+
+/* 6. Chocolate Bubble Waffle */
+.favorites-grid .featured-item:nth-child(6) .featured-price {
+    margin-bottom: 0rem;
 }
 
 .featured-title {
@@ -4019,22 +4050,43 @@ body.menu-page {
 }
 
 /* --- MACAROONS - Mobile --- */
-/* 1. Mango Macaroon (Left) */
+/* 1. Mango Macaron (Left) */
 #macaroons .featured-item:nth-child(1) .featured-img {
-    height: 350px;
+    height: 180px;
     transform: scale(1) translateY(0);
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1));
-    margin-bottom: -50px;
+    margin-bottom: -1rem;
+    margin-top: 0rem;
+}
+
+/* 2. Cookies & Cream Macaron (Right) */
+#macaroons .featured-item:nth-child(2) .featured-img {
+    height: 180px;
+    transform: scale(1) translateY(0);
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1));
+    margin-bottom: -1rem;
     margin-top: 0;
 }
 
-/* 2. Cookies & Cream Macaroon (Right) */
-#macaroons .featured-item:nth-child(2) .featured-img {
-    height: 350px;
-    transform: scale(1) translateY(0);
-    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1));
-    margin-bottom: -50px;
-    margin-top: 0;
+/* --- MENU FEATURED PRICE MARGIN CONTROL (Mobile) --- */
+/* Mango Macaron */
+#macaroons .featured-item:nth-child(1) .featured-price {
+    margin-top: 1.5rem;
+}
+
+/* Strawberry Yakult */
+#yakult .featured-item:nth-child(1) .featured-price {
+    margin-top: 1.4rem;
+}
+
+/* Royal Fruit Black Tea */
+#fruit-tea .featured-item:nth-child(1) .featured-price {
+    margin-top: 1.4rem;
+}
+
+/* Taro Strawberry Tea */
+#milk-tea .featured-item:nth-child(2) .featured-price {
+    margin-top: 1.4rem;
 }
 
 /* --- ROLLED ICE CREAM - Mobile --- */
@@ -4130,6 +4182,37 @@ body.menu-page {
         object-fit: contain;
         margin-bottom: 6rem !important;
         margin-top: -5rem;
+    }
+
+    /* --- OUR FAVORITES - Price Margin Control (Desktop) --- */
+    /* 1. Brown Sugar Bubble Tea */
+    .favorites-grid .featured-item:nth-child(1) .featured-price {
+        margin-bottom: 0;
+    }
+
+    /* 2. Oreo Hand Roll */
+    .favorites-grid .featured-item:nth-child(2) .featured-price {
+        margin-bottom: 0;
+    }
+
+    /* 3. Royal Fruit Black Tea */
+    .favorites-grid .featured-item:nth-child(3) .featured-price {
+        margin-bottom: 0;
+    }
+
+    /* 4. Taro Strawberry Tea */
+    .favorites-grid .featured-item:nth-child(4) .featured-price {
+        margin-bottom: 0;
+    }
+
+    /* 5. Chocolate Ice Cream Milk Tea */
+    .favorites-grid .featured-item:nth-child(5) .featured-price {
+        margin-bottom: 0;
+    }
+
+    /* 6. Chocolate Bubble Waffle */
+    .favorites-grid .featured-item:nth-child(6) .featured-price {
+        margin-bottom: 0;
     }
 
     /* Increase font sizes for Favorites items on Desktop */
@@ -4401,25 +4484,25 @@ body.menu-page {
     }
 
     /* --- MACAROONS - Desktop --- */
-    /* 1. Mango Macaroon (Left) */
+    /* 1. Mango Macaron (Left) */
     #macaroons .featured-item:nth-child(1) .featured-img {
         height: 250px;
         transform: scale(1.4) translateY(0) !important;
         transform-origin: center center;
-        filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1));
+        filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3));
         object-fit: contain;
-        margin-bottom: 3rem !important;
+        margin-bottom: 1rem !important;
         margin-top: 2rem !important;
     }
 
-    /* 2. Cookies & Cream Macaroon (Right) */
+    /* 2. Cookies & Cream Macaron (Right) */
     #macaroons .featured-item:nth-child(2) .featured-img {
         height: 250px;
         transform: scale(1.4) translateY(0) !important;
         transform-origin: center center;
-        filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1));
+        filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3));
         object-fit: contain;
-        margin-bottom: 3rem !important;
+        margin-bottom: 1rem !important;
         margin-top: 2rem !important;
     }
 
