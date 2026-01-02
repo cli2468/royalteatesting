@@ -232,13 +232,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Circular Text Scroll
+    // Circular Text Scroll - Optimized with requestAnimationFrame
     const circularValues = document.querySelector('.circular-text-scroll-wrapper');
     if (circularValues) {
+        let ticking = false;
+        let lastScrollPos = 0;
+
         window.addEventListener('scroll', () => {
-            const scrollPos = window.scrollY;
-            const rotation = scrollPos * -0.15; // Down = Negative = CCW
-            circularValues.style.transform = `rotate(${rotation}deg)`;
-        });
+            lastScrollPos = window.scrollY;
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const rotation = lastScrollPos * -0.15;
+                    circularValues.style.transform = `rotate3d(0, 0, 1, ${rotation}deg)`;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
     }
 });

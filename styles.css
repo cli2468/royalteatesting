@@ -25,6 +25,16 @@ html {
     overflow-x: hidden;
 }
 
+/* Decorative Section Icons */
+.section-icon {
+    position: absolute;
+    width: 60px;
+    height: auto;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 0;
+}
+
 body {
     font-family: var(--font-body);
     background-color: var(--color-bg);
@@ -1668,14 +1678,24 @@ footer {
         margin: 0 !important;
     }
 
-    /* Mobile Order: Milk Teas (2) First */
+    /* Mobile tea card order: Milk Teas first, Fruit Teas second, Milk Foam third */
+    .tea-card:nth-child(1) {
+        order: 1;
+    }
+
     .tea-card:nth-child(2) {
-        order: -1;
+        order: 2;
+    }
+
+    .tea-card:nth-child(3) {
+        order: 3;
+    }
+
+    /* Mobile tea card styling adjustments */
+    .tea-card:nth-child(1) {
         position: relative;
         z-index: 100 !important;
-        /* Top layer */
         margin-bottom: 1.5rem !important;
-        /* Reduced margin to bring cards closer */
     }
 
     .tea-card img {
@@ -1685,8 +1705,8 @@ footer {
         display: block;
     }
 
-    /* Make Milk Tea Taller */
-    .tea-card:nth-child(2) img {
+    /* Make Milk Tea (1st card) Taller */
+    .tea-card:nth-child(1) img {
         height: 550px !important;
     }
 
@@ -2529,13 +2549,14 @@ body.menu-page {
 }
 
 .hero-center-img {
-    width: 85%;
-    height: 85%;
+    width: 120%;
+    height: 120%;
     object-fit: cover;
+    object-position: 50% 90%;
     border-radius: 50%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     position: relative;
-    z-index: 2;
+    z-index: 1;
     opacity: 0;
     animation: fadeIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
@@ -4054,7 +4075,7 @@ body.menu-page {
 #macaroons .featured-item:nth-child(1) .featured-img {
     height: 180px;
     transform: scale(1) translateY(0);
-    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3));
     margin-bottom: -1rem;
     margin-top: 0rem;
 }
@@ -4063,7 +4084,7 @@ body.menu-page {
 #macaroons .featured-item:nth-child(2) .featured-img {
     height: 180px;
     transform: scale(1) translateY(0);
-    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.5));
     margin-bottom: -1rem;
     margin-top: 0;
 }
