@@ -253,14 +253,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Smooth animation loop
         function animateRotation() {
-            // Lerp: move 25% towards target each frame (faster response)
-            currentRotation += (targetRotation - currentRotation) * 0.25;
+            // Lerp: move 15% towards target each frame (balance between smooth and snappy)
+            currentRotation += (targetRotation - currentRotation) * 0.15;
 
-            // Apply rotation with lower precision for performance
-            circularValues.style.transform = `rotate3d(0, 0, 1, ${currentRotation.toFixed(2)}deg)`;
+            // Apply rotation with full precision for smoothness
+            circularValues.style.transform = `rotate3d(0, 0, 1, ${currentRotation}deg)`;
 
-            // Stop if close enough to target (increased threshold for less CPU)
-            if (Math.abs(targetRotation - currentRotation) > 0.1) {
+            // Stop if really close to target
+            if (Math.abs(targetRotation - currentRotation) > 0.01) {
                 requestAnimationFrame(animateRotation);
             } else {
                 isAnimating = false;
