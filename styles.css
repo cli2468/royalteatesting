@@ -3630,6 +3630,9 @@ body.menu-page {
     pointer-events: none;
     z-index: 0;
     will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .circular-text-scroll-wrapper svg {
