@@ -241,8 +241,10 @@ document.addEventListener('DOMContentLoaded', () => {
         let isAnimating = false;
 
         // Update target on scroll
-        // Update target on scroll - Light wakeup only
         window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY;
+            targetRotation = scrollPos * -0.15; // Target rotation based on scroll
+
             if (!isAnimating) {
                 isAnimating = true;
                 requestAnimationFrame(animateRotation);
@@ -251,11 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Smooth animation loop
         function animateRotation() {
-            // Poll scroll position directly for freshest data
-            const scrollPos = window.scrollY;
-            targetRotation = scrollPos * -0.12; // Slightly sliower rotation (-0.12) for less visual noise
-
-            // Lerp: move 15% towards target
+            // Lerp: move 15% towards target each frame (balance between smooth and snappy)
             currentRotation += (targetRotation - currentRotation) * 0.15;
 
             // Apply rotation with full precision for smoothness
