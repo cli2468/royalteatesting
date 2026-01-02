@@ -2549,14 +2549,16 @@ body.menu-page {
 }
 
 .hero-center-img {
-    width: 120%;
-    height: 120%;
-    object-fit: cover;
-    object-position: 50% 90%;
+    width: 85%;
+    height: 85%;
     border-radius: 50%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 1;
+    background-color: #f0f0f0;
+    background-size: 80%;
+    background-position: center 50%;
+    background-repeat: no-repeat;
     opacity: 0;
     animation: fadeIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
@@ -2871,6 +2873,7 @@ body.menu-page {
     .hero-center-img {
         width: 85%;
         height: 85%;
+        object-position: 50% 50%;
     }
 
     .menu-title {
@@ -3630,9 +3633,6 @@ body.menu-page {
     pointer-events: none;
     z-index: 0;
     will-change: transform;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
 }
 
 .circular-text-scroll-wrapper svg {

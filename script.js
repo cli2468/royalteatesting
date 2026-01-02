@@ -233,21 +233,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Circular Text Scroll - Optimized with requestAnimationFrame
+    // Circular Text Scroll - Smooth Lerp Animation
     const circularValues = document.querySelector('.circular-text-scroll-wrapper');
     if (circularValues) {
-        let ticking = false;
-        let lastScrollPos = 0;
+        let currentRotation = 0;
+        let targetRotation = 0;
+        let isAnimating = false;
 
+        // Update target on scroll
         window.addEventListener('scroll', () => {
-            lastScrollPos = window.scrollY;
-            if (!ticking) {
-                requestAnimationFrame(() => {
-                    const rotation = lastScrollPos * -0.15;
-                    circularValues.style.transform = `rotate3d(0, 0, 1, ${rotation}deg)`;
-                    ticking = false;
-                });
-                ticking = true;
+            const scrollPos = window.scrollY;
+            targetRotation = scrollPos * -0.15; // Target rotation based on scroll
+
+            if (!isAnimating) {
+                isAnimating = true;
+                requestAnimationFrame(animateRotation);
             }
         }, { passive: true });
+
+        // Smooth animation loop
+        function animateRotation() {
+            // Lerp: move 10% towards target each frame
+            currentRotation += (targetRotation - currentRotation) * 0.1;
+
+            // Apply rotation
+            circularValues.style.transform = `rotate3d(0, 0, 1, ${currentRotation.toFixed(2)}deg)`;
+
+            // Stop if close enough to target
+            if (Math.abs(targetRotation - currentRotation) > 0.05) {
+                requestAnimationFrame(animateRotation);
+            } else {
+                isAnimating = false;
+            }
+        }
     }
 });
