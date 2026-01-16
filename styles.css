@@ -3524,12 +3524,24 @@ body.menu-page {
     position: relative;
     z-index: 50;
     text-align: center;
-    margin-top: -200px;
+    margin-top: -50px;
     /* Pull up to meet lifted bowls */
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     /* Space before banner */
     opacity: 0;
     animation: ctaFadeIn 0.8s ease-out forwards 1.2s;
+}
+
+@keyframes ctaFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Hide ORDER NOW button below headline on mobile - shown on desktop via media query */
