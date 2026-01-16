@@ -1121,13 +1121,9 @@ a {
         position: absolute;
     }
 
-    /* MIDDLE COLUMN: CTA Button */
+    /* MIDDLE COLUMN: CTA Button - HIDDEN ON DESKTOP */
     .hero-cta-wrapper {
-        grid-column: 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
+        display: none;
     }
 
     .btn-primary.hero-btn {
